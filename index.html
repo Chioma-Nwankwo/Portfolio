@@ -827,16 +827,27 @@ null,
 
 <!-- MODAL -->
 <div class="modal" id="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal()">✖</span>
-<h3 id="modalTitle"></h3>
-<p id="modalDesc"></p>
-<img id="modalImg">
-<a id="demoLink" target="_blank">Live Demo</a>
-<a id="gitLink" target="_blank">GitHub</a>
-</div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modalTitle"></h3>
+            <span class="close" onclick="closeModal()">✖</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-media" id="modalMediaContainer"></div>
+            <p id="modalDesc"></p>
+            <div class="modal-links">
+                <a id="demoLink" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a id="gitLink" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
+    
 <script>
 function scrollToProjects() {
     document.getElementById('projects').scrollIntoView({ 
