@@ -864,17 +864,17 @@ function filterProjects(type) {
 
 function openModal(title, desc, image, video, demo, git, badge) {
     const modal = document.getElementById('modal');
-    const mediaContainer = document.getElementById('modalMediaContainer');
+    const mediaContainer = document. getElementById('modalMediaContainer');
     
     modal.style.display = 'flex';
-    document.getElementById('modalTitle').innerText = title;
+    document. getElementById('modalTitle').innerText = title;
     document.getElementById('modalDesc').innerText = desc;
     
     // Clear previous media
     mediaContainer.innerHTML = '';
     
     // Add video if provided, otherwise image
-    if (video && video !== 'null' && !video.includes('placeholder')) {
+    if (video && video !== 'null' && video !== null) {
         const videoEl = document.createElement('video');
         videoEl.src = video;
         videoEl.controls = true;
@@ -884,31 +884,36 @@ function openModal(title, desc, image, video, demo, git, badge) {
         videoEl.style.width = '100%';
         videoEl.style.borderRadius = '15px';
         mediaContainer.appendChild(videoEl);
-    } else if (image && !image.includes('placeholder')) {
-        const imgEl = document.createElement('img');
+    } else if (image && image !== 'null' && image !== null && !image.includes('placeholder')) {
+        const imgEl = document. createElement('img');
         imgEl.src = image;
         imgEl.alt = title;
         imgEl.style.width = '100%';
-        imgEl.style.borderRadius = '15px';
+        imgEl. style.borderRadius = '15px';
         mediaContainer.appendChild(imgEl);
     }
     
     // Handle demo link
     const demoLink = document.getElementById('demoLink');
-    if (demo && demo !== '#' && demo !== 'null') {
+    if (demo && demo !== '#' && demo !== 'null' && demo !== null && demo.trim() !== '') {
         demoLink.href = demo;
         demoLink.style.display = 'inline-flex';
     } else {
-        demoLink.style.display = 'none';
+        demoLink. style.display = 'none';
     }
     
     // Handle GitHub link
-    document.getElementById('gitLink').href = git;
+    const gitLink = document.getElementById('gitLink');
+    if (git && git !== '#' && git !== 'null' && git !== null && git.trim() !== '') {
+        gitLink.href = git;
+        gitLink.style.display = 'inline-flex';
+    } else {
+        gitLink.style.display = 'none';
+    }
     
     // Prevent body scroll
     document.body.style.overflow = 'hidden';
 }
-
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
     document.body.style.overflow = 'auto';
