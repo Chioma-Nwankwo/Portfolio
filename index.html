@@ -15,14 +15,14 @@
 }
 
 :root {
-    --primary: #6366f1;
-    --secondary: #8b5cf6;
-    --accent: #ec4899;
-    --dark: #0f172a;
-    --darker: #020617;
-    --light: #f8fafc;
-    --gray: #64748b;
-    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary: #c2410c;        /* Rust orange */
+    --secondary: #14532d;      /* Forest green */
+    --accent: #fb923c;         /* Light orange */
+    --dark: #0f1a14;           /* Dark forest */
+    --darker: #030712;         /* Near black */
+    --light: #fef2f2;          /* Warm white */
+    --gray: #9ca3af;           /* Neutral gray */
+    --green-bright: #22c55e;   /* Success green */
 }
 
 body {
@@ -42,19 +42,23 @@ header {
     align-items: center;
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: var(--secondary);
     overflow: hidden;
 }
 
 header::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: 
+        radial-gradient(circle at 30% 40%, var(--primary) 0%, transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(251, 146, 60, 0.4) 0%, transparent 50%);
+    opacity: 0.2;
+    z-index: 1;
 }
 
 .profile-image {
@@ -97,10 +101,9 @@ header button {
     position: relative;
     z-index: 2;
     padding: 15px 40px;
-    border: 2px solid white;
+    border: 2px solid var(--accent);
     border-radius: 50px;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);
+    background: var(--primary);
     color: white;
     cursor: pointer;
     font-size: 1.1rem;
@@ -111,10 +114,11 @@ header button {
 }
 
 header button:hover {
-    background: white;
-    color: var(--primary);
+    background: var(--accent);
+    border-color: var(--light);
+    color: var(--dark);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(251, 146, 60, 0.4);
 }
 
 .social-links {
@@ -129,7 +133,7 @@ header button:hover {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.2);
+    background: rgba(20, 83, 45, 0.2);
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
@@ -140,9 +144,17 @@ header button:hover {
     text-decoration: none;
 }
 
+.social-links a:nth-child(odd) {
+    background: rgba(194, 65, 12, 0.2);
+}
+
+.social-links a:nth-child(even) {
+    background: rgba(20, 83, 45, 0.2);
+}
+
 .social-links a:hover {
-    background: white;
-    color: var(--primary);
+    background: var(--accent);
+    color: var(--dark);
     transform: translateY(-5px);
 }
 
@@ -154,7 +166,7 @@ section {
 }
 
 section:nth-child(even) {
-    background: var(--darker);
+    background: #1a2e1f;  /* Green-tinted surface */
 }
 
 h2 {
@@ -218,27 +230,27 @@ h2::after {
 }
 
 .skill-item {
-    background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+    background: #1a2e1f;
     padding: 25px 20px;
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(102,126,234,0.2);
+    border: 1px solid #2d4a35;
 }
 
 .skill-item:hover {
     transform: translateY(-5px);
-    background: linear-gradient(135deg, rgba(102,126,234,0.2), rgba(118,75,162,0.2));
+    background: var(--dark);
     border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(102,126,234,0.3);
+    box-shadow: 
+        inset 0 0 20px rgba(194, 65, 12, 0.1),
+        0 8px 20px rgba(194, 65, 12, 0.3);
 }
 
 .skill-item i {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent);
 }
 
 .skill-item span {
@@ -257,7 +269,7 @@ h2::after {
 
 .filters button {
     padding: 12px 30px;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--secondary);
     border-radius: 50px;
     background: transparent;
     color: var(--light);
@@ -268,13 +280,15 @@ h2::after {
 
 .filters button:hover {
     background: var(--primary);
+    border-color: var(--accent);
     transform: translateY(-2px);
 }
 
 .filters .active {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--secondary);
+    border-color: var(--green-bright);
     color: white;
-    border-color: transparent;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
 }
 
 /* PROJECTS GRID */
@@ -286,12 +300,12 @@ h2::after {
 }
 
 .card {
-    background: linear-gradient(135deg, rgba(102,126,234,0.05), rgba(118,75,162,0.05));
+    background: linear-gradient(135deg, rgba(20, 83, 45, 0.1), rgba(194, 65, 12, 0.05));
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s ease;
-    border: 1px solid rgba(102,126,234,0.2);
+    border: 1px solid #2d4a35;
     position: relative;
 }
 
@@ -302,7 +316,7 @@ h2::after {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    background: var(--primary);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -313,7 +327,7 @@ h2::after {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(102,126,234,0.3);
+    box-shadow: 0 20px 60px rgba(194, 65, 12, 0.3);
     border-color: var(--primary);
 }
 
@@ -340,12 +354,16 @@ h2::after {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--green-bright);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+}
+
+.card-badge.ongoing {
+    background: var(--primary);
 }
 
 .card-content {
@@ -473,7 +491,7 @@ h2::after {
     gap: 10px;
     padding: 12px 30px;
     border-radius: 50px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -481,8 +499,9 @@ h2::after {
 }
 
 .modal-links a:hover {
+    background: var(--accent);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+    box-shadow: 0 10px 30px rgba(194, 65, 12, 0.4);
 }
 
 /* FOOTER */
@@ -668,7 +687,7 @@ footer a:hover {
             <span class="tag">Web App</span>
         </div>
     </div>
-    <span class="card-badge">Ongoing</span>
+    <span class="card-badge ongoing">Ongoing</span>
 </div>
 
 <div class="card ai" onclick="openModal(
