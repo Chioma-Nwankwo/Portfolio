@@ -15,14 +15,15 @@
 }
 
 :root {
-    --primary: #6366f1;
-    --secondary: #8b5cf6;
-    --accent: #ec4899;
-    --dark: #0f172a;
-    --darker: #020617;
-    --light: #f8fafc;
-    --gray: #64748b;
-    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary: #000080;        /* True navy blue */
+    --secondary: #3d2814;      /* Dark brown */
+    --accent: #4169e1;         /* Royal blue (lighter navy for accents) */
+    --brown-light: #6b4423;    /* Light brown for hover states */
+    --dark: #0a0a0a;           /* Pure dark background */
+    --darker: #000000;         /* Black for sections */
+    --light: #f5f5f5;          /* Off-white text */
+    --gray: #9ca3af;           /* Neutral gray */
+    --blue-bright: #1e90ff;    /* Dodger blue for highlights */
 }
 
 body {
@@ -42,19 +43,170 @@ header {
     align-items: center;
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: var(--primary);
     overflow: hidden;
 }
 
+/* Animated Blob 1 - Navy Blue */
 header::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    top: -10%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: #000066;
+    border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+    opacity: 0.6;
+    animation: blobFloat1 15s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Animated Blob 2 - Dark Brown */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: var(--secondary);
+    border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%;
+    opacity: 0.5;
+    animation: blobFloat2 18s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Additional floating blobs */
+.blob-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%;
+    opacity: 0.4;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.blob-3 {
+    top: 30%;
+    right: 20%;
+    width: 300px;
+    height: 300px;
+    background: var(--brown-light);
+    animation: blobFloat3 20s infinite, blobMorph 8s infinite;
+}
+
+.blob-4 {
+    bottom: 20%;
+    left: 15%;
+    width: 400px;
+    height: 400px;
+    background: var(--accent);
+    animation: blobFloat4 25s infinite, blobMorph 10s infinite reverse;
+}
+
+.blob-5 {
+    top: 60%;
+    left: 40%;
+    width: 250px;
+    height: 250px;
+    background: #2a1810;
+    animation: blobFloat5 22s infinite, fadeInOut 6s infinite;
+}
+
+/* Blob Animations */
+@keyframes blobFloat1 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(50px, -80px) rotate(120deg);
+    }
+    66% {
+        transform: translate(-30px, 60px) rotate(240deg);
+    }
+}
+
+@keyframes blobFloat2 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(-70px, 50px) rotate(-120deg);
+    }
+    66% {
+        transform: translate(40px, -40px) rotate(-240deg);
+    }
+}
+
+@keyframes blobFloat3 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(-100px, 80px) scale(1.2);
+    }
+}
+
+@keyframes blobFloat4 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(80px, -60px) scale(0.9);
+    }
+}
+
+@keyframes blobFloat5 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(60px, -40px) rotate(90deg);
+    }
+    50% {
+        transform: translate(-40px, -80px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-80px, 40px) rotate(270deg);
+    }
+}
+
+@keyframes blobMorph {
+    0%, 100% {
+        border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%;
+    }
+    25% {
+        border-radius: 55% 45% 40% 60% / 45% 60% 40% 55%;
+    }
+    50% {
+        border-radius: 45% 55% 60% 40% / 60% 45% 55% 40%;
+    }
+    75% {
+        border-radius: 60% 40% 45% 55% / 40% 55% 45% 60%;
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Ensure content stays above blobs */
+header > * {
+    position: relative;
+    z-index: 2;
 }
 
 .profile-image {
@@ -97,10 +249,9 @@ header button {
     position: relative;
     z-index: 2;
     padding: 15px 40px;
-    border: 2px solid white;
+    border: 2px solid var(--accent);
     border-radius: 50px;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);
+    background: var(--primary);
     color: white;
     cursor: pointer;
     font-size: 1.1rem;
@@ -111,10 +262,10 @@ header button {
 }
 
 header button:hover {
-    background: white;
-    color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--brown-light);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(61, 40, 20, 0.6);
 }
 
 .social-links {
@@ -129,7 +280,7 @@ header button:hover {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.2);
+    background: rgba(0, 0, 128, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
@@ -138,12 +289,22 @@ header button:hover {
     font-size: 1.3rem;
     transition: all 0.3s ease;
     text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.social-links a:nth-child(odd) {
+    background: rgba(0, 0, 128, 0.3);
+}
+
+.social-links a:nth-child(even) {
+    background: rgba(61, 40, 20, 0.3);
 }
 
 .social-links a:hover {
-    background: white;
-    color: var(--primary);
-    transform: translateY(-5px);
+    background: var(--accent);
+    color: var(--darker);
+    transform: translateY(-5px) scale(1.1);
 }
 
 /* SECTIONS */
@@ -151,10 +312,36 @@ section {
     padding: 80px 10%;
     max-width: 1400px;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
 section:nth-child(even) {
-    background: var(--darker);
+    background: #0a0a0a;
+}
+
+section:nth-child(odd) {
+    background: #1a1a1a;
+}
+
+/* Subtle blob effects in sections */
+section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: var(--secondary);
+    border-radius: 50%;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+section:nth-child(even)::before {
+    background: var(--primary);
+    left: -20%;
+    right: auto;
 }
 
 h2 {
@@ -172,7 +359,7 @@ h2::after {
     left: 0;
     width: 60%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    background: var(--primary);
     border-radius: 2px;
 }
 
@@ -191,7 +378,7 @@ h2::after {
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     object-fit: cover;
-    background: linear-gradient(135deg, rgba(102,126,234,0.2), rgba(118,75,162,0.2));
+    background: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,27 +405,30 @@ h2::after {
 }
 
 .skill-item {
-    background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+    background: #1a1a1a;
     padding: 25px 20px;
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(102,126,234,0.2);
+    border: 1px solid #333;
 }
 
-.skill-item:hover {
-    transform: translateY(-5px);
-    background: linear-gradient(135deg, rgba(102,126,234,0.2), rgba(118,75,162,0.2));
-    border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(102,126,234,0.3);
+.skill-item:nth-child(odd):hover {
+    background: var(--primary);
+    border-color: var(--accent);
+    box-shadow: 0 8px 20px rgba(0, 0, 128, 0.5);
+}
+
+.skill-item:nth-child(even):hover {
+    background: var(--secondary);
+    border-color: var(--brown-light);
+    box-shadow: 0 8px 20px rgba(61, 40, 20, 0.5);
 }
 
 .skill-item i {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent);
 }
 
 .skill-item span {
@@ -267,14 +457,15 @@ h2::after {
 }
 
 .filters button:hover {
-    background: var(--primary);
+    background: var(--secondary);
+    border-color: var(--brown-light);
     transform: translateY(-2px);
 }
 
 .filters .active {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
+    border-color: var(--accent);
     color: white;
-    border-color: transparent;
 }
 
 /* PROJECTS GRID */
@@ -286,12 +477,12 @@ h2::after {
 }
 
 .card {
-    background: linear-gradient(135deg, rgba(102,126,234,0.05), rgba(118,75,162,0.05));
+    background: #1a1a1a;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s ease;
-    border: 1px solid rgba(102,126,234,0.2);
+    border: 1px solid #333;
     position: relative;
 }
 
@@ -301,10 +492,24 @@ h2::after {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    height: 3px;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.card.ai::before {
+    background: var(--primary);
     opacity: 0;
-    transition: opacity 0.3s ease;
+}
+
+.card.web::before {
+    background: var(--secondary);
+    opacity: 0;
+}
+
+.card.systems::before {
+    background: var(--brown-light);
+    opacity: 0;
 }
 
 .card:hover::before {
@@ -313,14 +518,19 @@ h2::after {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(102,126,234,0.3);
     border-color: var(--primary);
+    box-shadow: 0 20px 60px rgba(0, 0, 128, 0.4);
+}
+
+.card.web:hover {
+    border-color: var(--secondary);
+    box-shadow: 0 20px 60px rgba(61, 40, 20, 0.4);
 }
 
 .card-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, rgba(102,126,234,0.3), rgba(118,75,162,0.3));
+    background: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -340,7 +550,7 @@ h2::after {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -371,7 +581,7 @@ h2::after {
 
 .tag {
     padding: 5px 12px;
-    background: rgba(102,126,234,0.2);
+    background: rgba(0, 0, 128, 0.2);
     border-radius: 15px;
     font-size: 0.85rem;
     color: var(--light);
@@ -398,15 +608,15 @@ h2::after {
     overflow-y: auto;
     border-radius: 25px;
     animation: modalSlideIn 0.4s ease;
-    border: 1px solid rgba(102,126,234,0.3);
+    border: 1px solid #333;
     box-shadow: 0 30px 90px rgba(0,0,0,0.5);
 }
 
 .modal-header {
     position: relative;
     padding: 30px;
-    background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
-    border-bottom: 1px solid rgba(102,126,234,0.2);
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
 }
 
 .close {
@@ -473,16 +683,26 @@ h2::after {
     gap: 10px;
     padding: 12px 30px;
     border-radius: 50px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
     color: white;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
+.modal-links a:nth-child(2) {
+    background: var(--secondary);
+}
+
 .modal-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+    background: var(--accent);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.4);
+}
+
+.modal-links a:nth-child(2):hover {
+    background: var(--brown-light);
+    box-shadow: 0 10px 30px rgba(61, 40, 20, 0.4);
 }
 
 /* FOOTER */
@@ -490,7 +710,7 @@ footer {
     text-align: center;
     padding: 60px 20px;
     background: var(--darker);
-    border-top: 1px solid rgba(102,126,234,0.2);
+    border-top: 1px solid #333;
 }
 
 footer p {
@@ -549,6 +769,11 @@ footer a:hover {
 <body>
 
 <header>
+    <div class="blob-container">
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="blob blob-5"></div>
+    </div>
     <!-- Replace with your profile image: <img src="your-photo.jpg" alt="Chioma Nwankwo" class="profile-image"> -->
     <div class="profile-image">
         <i class="fas fa-user"></i>
