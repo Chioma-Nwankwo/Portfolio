@@ -15,14 +15,14 @@
 }
 
 :root {
-    --primary: #6366f1;
-    --secondary: #8b5cf6;
-    --accent: #ec4899;
-    --dark: #0f172a;
-    --darker: #020617;
-    --light: #f8fafc;
-    --gray: #64748b;
-    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary: #c2410c;        /* Burnt orange/copper - CTAs */
+    --secondary: #1e3a8a;      /* Deep navy - structure */
+    --accent: #f97316;         /* Bright orange - highlights */
+    --dark: #0a1929;           /* Deep blue-black background */
+    --darker: #020617;         /* Pure dark sections */
+    --light: #fef3c7;          /* Warm cream text */
+    --gray: #94a3b8;           /* Cool gray body text */
+    --copper-dark: #92400e;    /* Dark copper for depth */
 }
 
 body {
@@ -42,19 +42,20 @@ header {
     align-items: center;
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: var(--secondary);
     overflow: hidden;
 }
 
 header::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: var(--copper-dark);
+    clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%);
+    z-index: 1;
 }
 
 .profile-image {
@@ -97,10 +98,9 @@ header button {
     position: relative;
     z-index: 2;
     padding: 15px 40px;
-    border: 2px solid white;
+    border: 2px solid var(--accent);
     border-radius: 50px;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);
+    background: var(--primary);
     color: white;
     cursor: pointer;
     font-size: 1.1rem;
@@ -111,10 +111,11 @@ header button {
 }
 
 header button:hover {
-    background: white;
-    color: var(--primary);
+    background: var(--accent);
+    border-color: var(--light);
+    color: var(--darker);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
 }
 
 .social-links {
@@ -228,9 +229,9 @@ h2::after {
 
 .skill-item:hover {
     transform: translateY(-5px);
-    background: linear-gradient(135deg, rgba(102,126,234,0.2), rgba(118,75,162,0.2));
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(194, 65, 12, 0.2));
     border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(102,126,234,0.3);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
 }
 
 .skill-item i {
@@ -286,12 +287,12 @@ h2::after {
 }
 
 .card {
-    background: linear-gradient(135deg, rgba(102,126,234,0.05), rgba(118,75,162,0.05));
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05), rgba(194, 65, 12, 0.05));
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s ease;
-    border: 1px solid rgba(102,126,234,0.2);
+    border-left: 4px solid var(--secondary);
     position: relative;
 }
 
@@ -313,8 +314,10 @@ h2::after {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(102,126,234,0.3);
-    border-color: var(--primary);
+    border-left-color: var(--primary);
+    box-shadow: 
+        -4px 0 0 var(--accent),
+        0 10px 30px rgba(194, 65, 12, 0.3);
 }
 
 .card-image {
