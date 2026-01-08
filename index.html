@@ -864,7 +864,7 @@ function filterProjects(type) {
 
     document.querySelectorAll('.card').forEach(card => {
         if (type === 'all' || card.classList.contains(type)) {
-            card.style.display = 'block';
+            card. style.display = 'block';
             setTimeout(() => card.style.opacity = '1', 10);
         } else {
             card.style.opacity = '0';
@@ -888,24 +888,24 @@ function openModal(title, desc, image, video, demo, git, badge) {
     if (video && video !== 'null' && video !== null) {
         const videoEl = document.createElement('video');
         videoEl.src = video;
-        videoEl.controls = true;
+        videoEl. controls = true;
         videoEl.autoplay = true;
         videoEl.muted = true;
         videoEl.loop = true;
-        videoEl.style.width = '100%';
+        videoEl.style. width = '100%';
         videoEl.style.borderRadius = '15px';
         mediaContainer.appendChild(videoEl);
     } else if (image && image !== 'null' && image !== null && !image.includes('placeholder')) {
-        const imgEl = document. createElement('img');
+        const imgEl = document.createElement('img');
         imgEl.src = image;
         imgEl.alt = title;
         imgEl.style.width = '100%';
-        imgEl. style.borderRadius = '15px';
+        imgEl.style.borderRadius = '15px';
         mediaContainer.appendChild(imgEl);
     }
     
     // Handle demo link
-    const demoLink = document.getElementById('demoLink');
+    const demoLink = document. getElementById('demoLink');
     if (demo && demo !== '#' && demo !== 'null' && demo !== null && demo.trim() !== '') {
         demoLink.href = demo;
         demoLink.style.display = 'inline-flex';
@@ -915,7 +915,7 @@ function openModal(title, desc, image, video, demo, git, badge) {
     
     // Handle GitHub link
     const gitLink = document.getElementById('gitLink');
-    if (git && git !== '#' && git !== 'null' && git !== null && git.trim() !== '') {
+    if (git && git !== '#' && git !== 'null' && git !== null && git. trim() !== '') {
         gitLink.href = git;
         gitLink.style.display = 'inline-flex';
     } else {
@@ -925,12 +925,13 @@ function openModal(title, desc, image, video, demo, git, badge) {
     // Prevent body scroll
     document.body.style.overflow = 'hidden';
 }
+
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
     document.body.style.overflow = 'auto';
     
     // Stop any playing videos
-    const videos = document.querySelectorAll('.modal-media video');
+    const videos = document.querySelectorAll('. modal-media video');
     videos.forEach(v => v.pause());
 }
 
