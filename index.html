@@ -807,6 +807,21 @@ h2 span {
     border-radius: 16px;
 }
 
+.modal-icon-area.gallery {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    background: none;
+    gap: 12px;
+}
+
+.modal-icon-area.gallery img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    object-fit: contain;
+}
+
 #modalDesc {
     font-size: 1rem;
     line-height: 1.8;
@@ -1106,9 +1121,10 @@ footer p {
             'https://github.com/Chioma-Nwankwo/AI-Powered-Smart-Microgrid_Web_App/tree/Branch_2',
             'completed',
             null,
-            'https://ai-powered-smart-microgrid-web-app.vercel.app/login'
+            'https://ai-powered-smart-microgrid-web-app.vercel.app/login',
+            ['portfolio-images/gridai-1.jpg', 'portfolio-images/gridai-2.jpg', 'portfolio-images/gridai-3.jpg']
         )">
-            <div class="card-icon-area"><i class="fas fa-bolt" style="font-size:4rem"></i></div>
+            <div class="card-icon-area"><img src="portfolio-images/gridai-1.jpg" alt="GridAI dashboard screenshot"></div>
             <span class="card-badge badge-completed">Completed</span>
             <div class="card-content">
                 <h3>GridAI — Smart Microgrid Analytics</h3>
@@ -1126,19 +1142,22 @@ footer p {
         <div class="card ai" onclick="openModal(
             'AI Data Analysis Assistant',
             'ai',
-            'A conversational AI assistant that automates exploratory data analysis. Users upload a dataset and receive automated cleaning, trend identification, and insight generation powered by the OpenAI API. Designed to make data analysis accessible without requiring coding knowledge.',
+            'A conversational AI assistant that automates exploratory data analysis. Users upload a dataset and receive automated cleaning, trend identification, and insight generation powered by the Gemini API. Designed to make data analysis accessible without requiring coding knowledge.',
             'fa-robot',
             null,
             'https://github.com/Chioma-Nwankwo/AI_Powered_Data_assistant',
-            'completed'
+            'completed',
+            null,
+            null,
+            ['portfolio-images/ai-assistant-1.png', 'portfolio-images/ai-assistant-2.png']
         )">
-            <div class="card-icon-area"><i class="fas fa-robot" style="font-size:4rem"></i></div>
+            <div class="card-icon-area"><img src="portfolio-images/ai-assistant-1.png" alt="AI Data Assistant screenshot"></div>
             <span class="card-badge badge-completed">Completed</span>
             <div class="card-content">
                 <h3>AI Data Analysis Assistant</h3>
-                <p>Automated EDA and insight generation powered by OpenAI API</p>
+                <p>Automated EDA and insight generation powered by Gemini API</p>
                 <div class="card-tags">
-                    <span class="tag">OpenAI</span>
+                    <span class="tag">Gemini</span>
                     <span class="tag">Python</span>
                     <span class="tag">NLP</span>
                 </div>
@@ -1309,7 +1328,7 @@ const categoryLabels = {
 };
 
 // Open modal — extra optional arg for second GitHub link (Android apps)
-function openModal(title, category, desc, iconClass, videoSrc, githubLink, badge, githubLink2, demoLink) {
+function openModal(title, category, desc, iconClass, videoSrc, githubLink, badge, githubLink2, demoLink, images) {
     document.getElementById('modal').style.display = 'flex';
     document.getElementById('modalTitle').innerText = title;
     document.getElementById('modalDesc').innerText = desc;
@@ -1318,7 +1337,11 @@ function openModal(title, category, desc, iconClass, videoSrc, githubLink, badge
     // Media area
     const iconArea = document.getElementById('modalIconArea');
     iconArea.innerHTML = '';
-    if (videoSrc) {
+    if (images && images.length) {
+        iconArea.classList.add('gallery');
+        iconArea.innerHTML = images.map(src => `<img src="${src}" alt="${title} screenshot">`).join('');
+    } else if (videoSrc) {
+        iconArea.classList.remove('gallery');
         const v = document.createElement('video');
         v.src = videoSrc;
         v.controls = true;
@@ -1327,6 +1350,7 @@ function openModal(title, category, desc, iconClass, videoSrc, githubLink, badge
         v.loop = true;
         iconArea.appendChild(v);
     } else {
+        iconArea.classList.remove('gallery');
         iconArea.innerHTML = `<i class="fas ${iconClass}" style="font-size:5rem"></i>`;
     }
 
