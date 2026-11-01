@@ -5,52 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chioma Esther Nwankwo | Data and AI engineer</title>
 <meta name="description" content="Portfolio of Chioma Esther Nwankwo, a computer science graduate in Abuja building data pipelines, machine learning models and AI apps. Open to remote roles worldwide.">
-<meta name="theme-color" content="#2230F0">
+<meta name="theme-color" content="#0E0522">
 <meta property="og:title" content="Chioma Esther Nwankwo | Data and AI engineer">
 <meta property="og:description" content="Data pipelines, machine learning models and AI apps. Open to remote roles worldwide.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232230F0'/%3E%3Ccircle cx='16' cy='18' r='6' fill='%23FFB020'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237B3CF2'/%3E%3Cstop offset='.55' stop-color='%23D83FB8'/%3E%3Cstop offset='1' stop-color='%23FFB86B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3C/svg%3E">
 
 <style>
 @font-face{font-family:"Anybody";src:url("fonts/anybody-latin-wdth-normal.woff2") format("woff2");font-weight:100 900;font-stretch:50% 150%;font-style:normal;font-display:swap}
 @font-face{font-family:"Hanken Grotesk";src:url("fonts/hanken-grotesk-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
 
 :root{
-  --cobalt:#2230F0;
-  --night:#070B2E;
-  --ink:#0A0F3A;
-  --sun:#FFB020;
-  --mint:#7CF0C9;
-  --mist:#ECEFF8;
-  --paper:#F8F9FD;
-  --mute:#4A5080;
-  --line:rgba(10,15,58,.16);
+  --plum:#0E0522;
+  --ink:#160B33;
+  --indigo:#4128E6;
+  --violet:#7B3CF2;
+  --magenta:#D83FB8;
+  --coral:#FF6A5C;
+  --apricot:#FFB86B;
+  --teal:#12B8A9;
+  --wash-a:#F6F2FF;
+  --wash-b:#FFF2EA;
+  --mute:#5C5080;
+  --line:rgba(22,11,51,.14);
+  --warm:linear-gradient(90deg,var(--magenta),var(--coral) 60%,var(--apricot));
+  --cool:linear-gradient(90deg,var(--indigo),var(--violet) 55%,var(--magenta));
   --gutter:clamp(20px,5vw,72px);
   --display:"Anybody","Arial Narrow",system-ui,sans-serif;
   --text:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--mist);color:var(--ink);font:400 1.0625rem/1.6 var(--text);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--wash-a);color:var(--ink);font:400 1.0625rem/1.6 var(--text);-webkit-font-smoothing:antialiased}
 img{max-width:100%}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:3px}
-.hero :focus-visible,.contact :focus-visible,.nav:not(.solid) :focus-visible{outline-color:var(--sun)}
-.skip{position:absolute;left:-999px;top:8px;background:var(--sun);color:var(--ink);padding:10px 14px;z-index:50;font-weight:600}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:3px}
+.hero :focus-visible,.contact :focus-visible,.nav:not(.solid) :focus-visible{outline-color:var(--apricot)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--apricot);color:var(--ink);padding:10px 14px;z-index:50;font-weight:600}
 .skip:focus{left:8px}
 
 /* ---------- navigation ---------- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:16px var(--gutter);color:#fff;transition:background-color .3s,color .3s,box-shadow .3s}
-.nav.solid{background:rgba(236,239,248,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav.solid{background:rgba(246,242,255,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
 .wordmark{font:700 1.15rem/1 var(--display);text-decoration:none;letter-spacing:-.005em}
 .nav-links{display:flex;gap:clamp(16px,2.6vw,34px)}
-.nav-links a{text-decoration:none;font-weight:500;font-size:.98rem;padding:6px 0;background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .25s}
+.nav-links a{text-decoration:none;font-weight:500;font-size:.98rem;padding:6px 0;background:var(--warm) 0 100%/0 2px no-repeat;transition:background-size .25s}
 .nav-links a:hover{background-size:100% 2px}
 
-/* ---------- hero: a day on a microgrid ---------- */
-.hero{position:relative;isolation:isolate;overflow:hidden;min-height:max(100svh,720px);display:flex;flex-direction:column;background:var(--cobalt);color:#fff}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
-#grid{position:absolute;inset:0;width:100%;height:100%;z-index:-2;touch-action:pan-y;cursor:ew-resize}
+/* ---------- shared mesh gradient (hero and contact) ---------- */
+.mesh{position:absolute;inset:0;z-index:-3;overflow:hidden;background:var(--plum)}
+.mesh i{position:absolute;border-radius:50%;will-change:transform}
+.mesh .m1{width:62vw;height:62vw;max-width:980px;max-height:980px;left:-14vw;top:-26vw;background:radial-gradient(closest-side,rgba(65,40,230,.85),rgba(65,40,230,0));animation:drift1 26s ease-in-out infinite alternate}
+.mesh .m2{width:56vw;height:56vw;max-width:880px;max-height:880px;right:-18vw;top:-8vw;background:radial-gradient(closest-side,rgba(216,63,184,.62),rgba(216,63,184,0));animation:drift2 31s ease-in-out infinite alternate}
+.mesh .m3{width:60vw;height:48vw;max-width:940px;max-height:760px;right:6vw;bottom:-24vw;background:radial-gradient(closest-side,rgba(255,106,92,.55),rgba(255,106,92,0));animation:drift3 29s ease-in-out infinite alternate}
+.mesh .m4{width:44vw;height:44vw;max-width:700px;max-height:700px;left:12vw;bottom:-22vw;background:radial-gradient(closest-side,rgba(123,60,242,.6),rgba(123,60,242,0));animation:drift1 34s ease-in-out infinite alternate-reverse}
+@keyframes drift1{to{transform:translate(6vw,5vw) scale(1.12)}}
+@keyframes drift2{to{transform:translate(-7vw,6vw) scale(.92)}}
+@keyframes drift3{to{transform:translate(-9vw,-5vw) scale(1.1)}}
+.grain::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.1;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* ---------- hero: raw data in, something usable out ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:max(100svh,700px);display:flex;flex-direction:column;color:#fff}
+#streams{position:absolute;inset:0;width:100%;height:100%;z-index:-2;touch-action:pan-y}
 .hero-copy{padding:clamp(88px,12vh,130px) var(--gutter) 0;pointer-events:none}
 .hero-copy a{pointer-events:auto}
 .hero h1{margin:0;font:800 clamp(2.9rem,7.2vw,7.6rem)/.92 var(--display);letter-spacing:-.025em;font-stretch:100%}
@@ -60,88 +76,70 @@ a{color:inherit}
 @keyframes widen{from{font-stretch:55%;opacity:0;transform:translateY(.12em)}to{font-stretch:100%;opacity:1;transform:none}}
 .lede{margin:1rem 0 1.3rem;max-width:42ch;font-size:clamp(1.1rem,1.7vw,1.4rem);line-height:1.4;color:rgba(255,255,255,.92)}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin:0}
-.btn{display:inline-block;padding:.72em 1.2em;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,background-color .2s,border-color .2s}
+.btn{display:inline-block;padding:.72em 1.2em;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s,border-color .2s,background-color .2s}
 .btn:hover{transform:translateY(-2px)}
-.btn-sun{background:var(--sun);color:var(--ink)}
-.btn-sun:hover{background:#ffc04d}
-.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
-.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
-.hero-gap{pointer-events:none;flex:1 1 auto;min-height:clamp(190px,30vh,360px)}
-.hero-bar{padding:0 var(--gutter) 18px;pointer-events:none}
-.readout{display:grid;grid-template-columns:auto auto 1fr;gap:10px 44px;align-items:end;margin-bottom:12px}
-.clock{font:800 clamp(2.4rem,4.4vw,3.6rem)/1 var(--display);font-variant-numeric:tabular-nums;font-stretch:100%;min-width:2.9em}
-.gauges{display:flex;gap:28px;margin:0}
-.gauges div{min-width:4.6rem}
-.gauges dt{display:flex;align-items:center;gap:7px;font-size:.9rem;color:rgba(255,255,255,.8)}
-.gauges dd{margin:0;font:700 1.55rem/1.15 var(--display);font-variant-numeric:tabular-nums}
-.sw{width:10px;height:10px;border-radius:50%;display:inline-block}
-.sw-solar{background:var(--sun)}
-.sw-demand{background:#fff}
-.sw-battery{background:var(--mint)}
-.state{margin:0;max-width:30ch;line-height:1.35;font-size:1.02rem}
-.scrub{pointer-events:auto}
-.scrub label{display:block;font-size:.85rem;color:rgba(255,255,255,.75);margin-bottom:2px}
-input[type=range]{-webkit-appearance:none;appearance:none;display:block;width:100%;height:30px;margin:0;background:transparent;cursor:ew-resize}
-input[type=range]::-webkit-slider-runnable-track{height:2px;background:rgba(255,255,255,.4);border-radius:2px}
-input[type=range]::-moz-range-track{height:2px;background:rgba(255,255,255,.4);border-radius:2px}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-10px;border-radius:50%;background:var(--sun);border:3px solid #fff;box-shadow:0 0 0 7px rgba(255,176,32,.25)}
-input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--sun);border:3px solid #fff;box-shadow:0 0 0 7px rgba(255,176,32,.25)}
-input[type=range]:focus-visible{outline:none}
-input[type=range]:focus-visible::-webkit-slider-thumb{outline:3px solid #fff;outline-offset:4px}
-input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline-offset:4px}
+.btn-warm{background:linear-gradient(100deg,var(--apricot),var(--coral));color:var(--ink)}
+.btn-warm:hover{box-shadow:0 8px 28px rgba(255,106,92,.45)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+.hero-gap{pointer-events:none;flex:1 1 auto;min-height:clamp(250px,38vh,460px)}
+.stages{position:relative;margin:0 var(--gutter) 22px;padding-top:10px;border-top:1px solid rgba(255,255,255,.28);display:flex;justify-content:space-between;font-size:.95rem;color:rgba(255,255,255,.85);pointer-events:none}
+.stages span{position:relative}
+.stages span::before{content:"";position:absolute;left:0;top:-15px;width:1px;height:9px;background:rgba(255,255,255,.55)}
+.stages span:last-child::before{left:auto;right:0}
+.stages span:last-child{text-align:right}
 
 /* ---------- sections ---------- */
 .section{padding:clamp(72px,10vw,140px) var(--gutter)}
+.wash-a{background:linear-gradient(180deg,var(--wash-a),#EEE7FF)}
+.wash-b{background:linear-gradient(180deg,var(--wash-b),#FFE9F0)}
 .section-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,64px);max-width:1400px;margin:0 auto}
 .section-title{margin:0;font:800 clamp(2rem,3.5vw,3rem)/1 var(--display);letter-spacing:-.02em;overflow-wrap:anywhere}
+.section-title::after{content:"";display:block;width:56px;height:5px;margin-top:14px;border-radius:3px;background:var(--cool)}
+.wash-b .section-title::after{background:var(--warm)}
 .wrap{max-width:1400px;margin:0 auto}
 .about-lead{margin:0 0 1.4rem;max-width:44ch;font-size:clamp(1.4rem,2.5vw,2.1rem);line-height:1.3;font-weight:500;letter-spacing:-.01em}
 .about-more{margin:0;max-width:60ch;color:var(--mute);font-size:1.1rem}
-.section-alt{background:var(--paper)}
 
-/* work: feature */
-.work-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-bottom:clamp(32px,5vw,64px)}
+/* work */
+.work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(24px,4vw,48px)}
 .work-head p{margin:0;color:var(--mute)}
-.feature{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,4vw,64px);margin-bottom:clamp(64px,9vw,120px);align-items:start}
-.feature h3{margin:0 0 1rem;font:800 clamp(2rem,4vw,3.4rem)/1 var(--display);letter-spacing:-.02em}
-.feature p{margin:0 0 1.2rem;max-width:52ch}
-.links{display:flex;flex-wrap:wrap;gap:10px 26px;margin:1.4rem 0 0}
-.link{display:inline-block;font-weight:600;text-decoration:none;border-bottom:2px solid var(--sun);padding-bottom:2px;transition:border-color .2s,color .2s}
-.link:hover{border-color:var(--cobalt);color:var(--cobalt)}
-.flow{display:block;width:100%;max-width:540px;height:auto;margin-top:2rem;overflow:visible}
+.links{display:flex;flex-wrap:wrap;gap:10px 26px;margin:1.3rem 0 0}
+.link{display:inline-block;font-weight:600;text-decoration:none;padding-bottom:3px;background:var(--warm) 0 100%/100% 3px no-repeat;transition:background-size .25s,color .25s}
+.link:hover{background-size:100% 100%;color:var(--ink)}
+.row{border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row summary{list-style:none;display:grid;grid-template-columns:1fr auto 26px;gap:8px 28px;align-items:center;padding:26px 14px;margin:0 -14px;border-radius:14px;cursor:pointer;transition:background-color .3s}
+.row summary::-webkit-details-marker{display:none}
+.row summary:hover{background:linear-gradient(90deg,rgba(123,60,242,.10),rgba(216,63,184,.08) 55%,rgba(255,106,92,.10))}
+.row h3{margin:0;font:700 clamp(1.5rem,3vw,2.4rem)/1.1 var(--display);letter-spacing:-.015em;transition:transform .25s}
+.row summary:hover h3{transform:translateX(8px)}
+.row .tags{margin:0;color:var(--mute);font-size:.95rem;text-align:right}
+.plus{position:relative;width:18px;height:18px;justify-self:end;color:var(--violet)}
+.plus::before,.plus::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:currentColor;transition:transform .3s}
+.plus::after{transform:rotate(90deg)}
+.row[open] .plus::after{transform:rotate(0)}
+.row-body{display:grid;grid-template-columns:1fr 1fr;gap:28px 48px;padding:6px 0 40px;animation:openrow .4s ease both}
+@keyframes openrow{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.row-body p{margin:0 0 1rem;max-width:54ch}
+.row-body .links{margin-top:1.2rem}
+.row-body.solo{grid-template-columns:minmax(0,1fr)}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+.shots img:first-child{grid-column:1/-1}
+.shot{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;box-shadow:0 14px 40px -18px rgba(65,40,230,.45)}
+.flow{display:block;width:100%;max-width:540px;height:auto;margin-top:1.8rem;overflow:visible}
 .flow rect{stroke:var(--ink);stroke-width:1.5}
-.flow .n1{fill:var(--sun)}
+.flow .n1{fill:url(#gA)}
 .flow .n2{fill:#fff}
-.flow .n3{fill:var(--cobalt);stroke:var(--cobalt)}
+.flow .n3{fill:url(#gB);stroke:none}
 .flow text{font-family:var(--text);fill:var(--ink)}
 .flow .t{font-size:17px;font-weight:700}
 .flow .s{font-size:13px;font-weight:500}
-.flow .n3 ~ text,.flow .on-blue{fill:#fff}
+.flow .on-dark{fill:#fff}
 .flow .arrow{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60}
 .flow.in .arrow{animation:draw .9s .2s ease forwards}
 .flow.in .arrow.b{animation-delay:.7s}
 @keyframes draw{to{stroke-dashoffset:0}}
-.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.shots img:first-child{grid-column:1/-1}
-.shot{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff}
-
-/* work: rows */
-.row{border-top:1px solid var(--line)}
-.row:last-child{border-bottom:1px solid var(--line)}
-.row summary{list-style:none;display:grid;grid-template-columns:1fr auto 26px;gap:8px 28px;align-items:center;padding:26px 0;cursor:pointer}
-.row summary::-webkit-details-marker{display:none}
-.row h3{margin:0;font:700 clamp(1.5rem,3vw,2.4rem)/1.1 var(--display);letter-spacing:-.015em;transition:transform .25s,color .25s}
-.row summary:hover h3{color:var(--cobalt);transform:translateX(8px)}
-.row .tags{margin:0;color:var(--mute);font-size:.95rem;text-align:right}
-.plus{position:relative;width:18px;height:18px;justify-self:end}
-.plus::before,.plus::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:currentColor;transition:transform .3s}
-.plus::after{transform:rotate(90deg)}
-.row[open] .plus::after{transform:rotate(0)}
-.row-body{display:grid;grid-template-columns:1fr 1fr;gap:28px 48px;padding:0 0 38px;animation:openrow .4s ease both}
-@keyframes openrow{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-.row-body p{margin:0;max-width:54ch}
-.row-body .links{margin-top:1.2rem}
-.row-body.solo{grid-template-columns:minmax(0,1fr)}
 
 /* experience */
 .xp{display:grid;grid-template-columns:190px 1fr;gap:12px 28px;padding:30px 0;border-top:1px solid var(--line)}
@@ -151,15 +149,20 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
 .xp .org{margin:.2rem 0 1rem;color:var(--mute)}
 .xp ul{margin:0;padding-left:1.15rem;max-width:62ch}
 .xp li{margin-bottom:.55rem}
+.xp li::marker{color:var(--magenta)}
 .edu{margin:1.6rem 0 0;color:var(--mute)}
 .edu strong{color:var(--ink)}
 
 /* skills */
-.skill-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
-.skill-cols h3{margin:0 0 1rem;font:700 1.35rem/1.1 var(--display);letter-spacing:-.01em}
-.skill-cols ul{list-style:none;margin:0;padding:0}
-.skill-cols li{padding:9px 0;border-top:1px solid var(--line)}
-.skill-cols li:last-child{border-bottom:1px solid var(--line)}
+.skill-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.skill{padding:22px 22px 12px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid rgba(22,11,51,.08);position:relative;overflow:hidden}
+.skill::before{content:"";position:absolute;left:0;right:0;top:0;height:6px}
+.skill.s1::before{background:linear-gradient(90deg,var(--indigo),var(--violet))}
+.skill.s2::before{background:linear-gradient(90deg,var(--violet),var(--magenta))}
+.skill.s3::before{background:linear-gradient(90deg,var(--magenta),var(--coral),var(--apricot))}
+.skill h3{margin:6px 0 .8rem;font:700 1.3rem/1.1 var(--display);letter-spacing:-.01em}
+.skill ul{list-style:none;margin:0;padding:0}
+.skill li{padding:9px 0;border-top:1px solid var(--line)}
 
 /* credentials */
 .cred{display:grid;grid-template-columns:1fr auto;gap:6px 28px;padding:24px 0;border-top:1px solid var(--line)}
@@ -167,43 +170,36 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
 .cred h3{margin:0;font:700 1.3rem/1.25 var(--display);letter-spacing:-.005em}
 .cred p{grid-column:1;margin:0;max-width:62ch;color:var(--mute)}
 .status{display:flex;align-items:center;gap:8px;font-weight:600;white-space:nowrap}
-.status i{width:10px;height:10px;border-radius:50%;background:var(--cobalt);display:inline-block}
-.status.wip i{background:var(--sun)}
+.status i{width:10px;height:10px;border-radius:50%;background:var(--teal);display:inline-block}
+.status.wip i{background:var(--apricot)}
 
 /* contact */
-.contact{background:var(--cobalt);color:#fff;padding:clamp(80px,11vw,160px) var(--gutter) clamp(56px,7vw,96px)}
+.contact{position:relative;isolation:isolate;overflow:hidden;color:#fff;padding:clamp(80px,11vw,160px) var(--gutter) clamp(56px,7vw,96px)}
 .contact h2{margin:0;max-width:15em;font:800 clamp(2.3rem,6vw,5.2rem)/.98 var(--display);letter-spacing:-.025em}
-.contact .sub{margin:1.4rem 0 0;max-width:40ch;font-size:1.2rem;color:rgba(255,255,255,.9)}
-.mail{display:inline-block;margin-top:clamp(28px,4vw,48px);font:700 clamp(1.4rem,4vw,3rem)/1.1 var(--display);letter-spacing:-.015em;text-decoration:none;border-bottom:4px solid var(--sun);padding-bottom:4px;word-break:break-all;transition:color .2s,border-color .2s}
-.mail:hover{color:var(--sun);border-color:#fff}
+.contact .sub{margin:1.4rem 0 0;max-width:40ch;font-size:1.2rem;color:rgba(255,255,255,.92)}
+.mail{display:inline-block;margin-top:clamp(28px,4vw,48px);font:700 clamp(1.4rem,4vw,3rem)/1.1 var(--display);letter-spacing:-.015em;text-decoration:none;padding-bottom:6px;word-break:break-all;background:linear-gradient(90deg,var(--apricot),var(--coral),var(--magenta)) 0 100%/100% 4px no-repeat;transition:background-size .25s}
+.mail:hover{background-size:100% 100%;color:var(--ink)}
 .contact-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;margin-top:clamp(40px,6vw,80px);align-items:flex-end}
 .contact-links{display:flex;flex-wrap:wrap;gap:12px}
 .qrs{display:flex;gap:18px}
-.qr{margin:0;text-align:left}
-.qr .box{width:112px;height:112px;padding:8px;background:#fff;border-radius:10px}
+.qr{margin:0}
+.qr .box{width:112px;height:112px;padding:8px;background:#fff;border-radius:12px}
 .qr svg{display:block;width:100%;height:100%}
-.qr figcaption{margin-top:8px;font-size:.9rem;color:rgba(255,255,255,.85)}
-.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:clamp(48px,7vw,96px);padding-top:22px;border-top:1px solid rgba(255,255,255,.28);font-size:.95rem;color:rgba(255,255,255,.8)}
+.qr figcaption{margin-top:8px;font-size:.9rem;color:rgba(255,255,255,.9)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:clamp(48px,7vw,96px);padding-top:22px;border-top:1px solid rgba(255,255,255,.3);font-size:.95rem;color:rgba(255,255,255,.85)}
 
 /* ---------- responsive ---------- */
 @media (max-width:900px){
-  .section-grid,.feature,.row-body{grid-template-columns:minmax(0,1fr)}
+  .section-grid,.row-body{grid-template-columns:minmax(0,1fr)}
   .section-grid{gap:28px}
-  .skill-cols{grid-template-columns:minmax(0,1fr);gap:28px}
+  .skill-cols{grid-template-columns:minmax(0,1fr)}
   .xp{grid-template-columns:minmax(0,1fr)}
-  .work-head{flex-direction:column;gap:8px}
+  .work-head{flex-direction:column;align-items:flex-start;gap:8px}
 }
 @media (max-width:700px){
   .nav-links a:not(.keep){display:none}
   .hero h1{font-size:clamp(3rem,17vw,5.5rem)}
   .hero h1 span{display:block;margin-right:0}
-  .readout{grid-template-columns:auto 1fr;gap:6px 22px}
-  .state{grid-column:1/-1;max-width:none}
-  .gauges{gap:12px}
-  .gauges div{min-width:0}
-  .gauges dd{font-size:1.3rem}
-  .gauges dt{font-size:.82rem;gap:5px}
-  .clock{font-size:2.5rem;min-width:0}
   .row summary{grid-template-columns:1fr 26px}
   .row .tags{grid-column:1;text-align:left;grid-row:2}
   .cred{grid-template-columns:minmax(0,1fr)}
@@ -234,14 +230,15 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
 
 <main>
 <!-- HERO -->
-<section class="hero" id="top" aria-labelledby="name">
-  <canvas id="grid" aria-hidden="true"></canvas>
+<section class="hero grain" id="top" aria-labelledby="name">
+  <div class="mesh" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i></div>
+  <canvas id="streams" aria-hidden="true"></canvas>
 
   <div class="hero-copy" id="copy">
     <h1 id="name"><span>Chioma</span> <span>Esther</span> <span>Nwankwo</span></h1>
     <p class="lede">Data and AI engineer in Abuja. I build pipelines, models and the apps around them.</p>
     <p class="cta">
-      <a class="btn btn-sun" href="mailto:chioman059@gmail.com">Email me</a>
+      <a class="btn btn-warm" href="mailto:chioman059@gmail.com">Email me</a>
       <a class="btn btn-ghost" href="https://github.com/Chioma-Nwankwo" target="_blank" rel="noopener">GitHub</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/chioma-nwankwo-2006d/" target="_blank" rel="noopener">LinkedIn</a>
     </p>
@@ -249,77 +246,29 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
 
   <div class="hero-gap" id="gap"></div>
 
-  <div class="hero-bar" id="bar">
-    <div class="readout">
-      <output class="clock" id="clock" for="hour">13:00</output>
-      <dl class="gauges">
-        <div><dt><i class="sw sw-solar"></i>Solar</dt><dd id="vSolar">0%</dd></div>
-        <div><dt><i class="sw sw-demand"></i>Demand</dt><dd id="vDemand">0%</dd></div>
-        <div><dt><i class="sw sw-battery"></i>Battery</dt><dd id="vBatt">0%</dd></div>
-      </dl>
-      <p class="state" id="state"></p>
-    </div>
-    <div class="scrub">
-      <label for="hour">An illustrative day on a microgrid. Drag across the hours.</label>
-      <input id="hour" type="range" min="0" max="24" step="0.05" value="13">
-    </div>
+  <div class="stages" id="stages" aria-hidden="true">
+    <span>Raw</span><span>Cleaned</span><span>Modelled</span><span>Served</span>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about" aria-labelledby="about-t">
+<section class="section wash-a" id="about" aria-labelledby="about-t">
   <div class="section-grid">
     <h2 class="section-title" id="about-t">About</h2>
     <div>
       <p class="about-lead">I'm a computer science graduate from Nile University of Nigeria, working towards becoming a cloud data and AI engineer. I like building the whole path: getting data in, cleaning it, modelling it, and putting the result in an app someone can use.</p>
-      <p class="about-more">Two internships taught me analysis, databases and shipping AI web apps. My final-year project, GridAI, analyses 16 years of energy data across four countries. I'm studying for the Google Cloud Professional Data Engineer certification and I'm open to remote roles worldwide.</p>
+      <p class="about-more">Two internships taught me analysis, databases and shipping AI web apps. Since then I've built a natural-language data assistant, forecasting and optimisation tools, and automated trading strategies. I'm studying for the Google Cloud Professional Data Engineer certification and I'm open to remote roles worldwide.</p>
     </div>
   </div>
 </section>
 
 <!-- WORK -->
-<section class="section section-alt" id="work" aria-labelledby="work-t">
+<section class="section wash-b" id="work" aria-labelledby="work-t">
   <div class="wrap">
     <div class="work-head">
       <h2 class="section-title" id="work-t">Work</h2>
-      <p>Select a project below to open it.</p>
+      <p>Select a project to open it.</p>
     </div>
-
-    <article class="feature">
-      <div>
-        <h3>GridAI: smart microgrid analytics</h3>
-        <p>A web app for analysing and optimising smart microgrids. It covers 16 years (2008–2024) of electricity demand, renewable generation and battery storage data across Nigeria, Australia, Germany and Canada, matched to ERA5 climate data for each region.</p>
-        <p>Inside, it compares 48-hour solar, wind and demand forecasts from Random Forest, Gradient Boosting and XGBoost models, optimises battery charging with linear programming, and flags anomalies with an ensemble. It runs in English and French, and Sign in with Apple, Google or Microsoft protects the production app.</p>
-        <p class="links">
-          <a class="link" href="https://ai-powered-smart-microgrid-web-app.vercel.app/login" target="_blank" rel="noopener">Open the live app</a>
-          <a class="link" href="https://github.com/Chioma-Nwankwo/AI-Powered-Smart-Microgrid_Web_App/tree/Branch_2" target="_blank" rel="noopener">View on GitHub</a>
-        </p>
-        <svg class="flow" id="flow" viewBox="0 0 540 150" role="img" aria-label="How GridAI works: energy data from 2008 to 2024 across four countries feeds forecasting and optimisation models, which power a web app with Apple, Google and Microsoft sign-in.">
-          <rect class="n1" x="2" y="26" width="150" height="98" rx="12"/>
-          <text class="t" x="18" y="62">Energy data</text>
-          <text class="s" x="18" y="86">2008–2024</text>
-          <text class="s" x="18" y="106">4 countries</text>
-
-          <rect class="n2" x="195" y="26" width="150" height="98" rx="12"/>
-          <text class="t" x="211" y="62">Models</text>
-          <text class="s" x="211" y="86">Forecasts and battery</text>
-          <text class="s" x="211" y="106">optimisation</text>
-
-          <rect class="n3" x="388" y="26" width="150" height="98" rx="12"/>
-          <text class="t on-blue" x="404" y="62">Web app</text>
-          <text class="s on-blue" x="404" y="86">Apple, Google and</text>
-          <text class="s on-blue" x="404" y="106">Microsoft sign-in</text>
-
-          <path class="arrow" d="M158 75H188M181 68l7 7-7 7"/>
-          <path class="arrow b" d="M351 75H381M374 68l7 7-7 7"/>
-        </svg>
-      </div>
-      <div class="shots">
-        <img class="shot" src="portfolio-images/Picture1.jpg" width="612" height="374" alt="GridAI sign-in screen with the pitch: connect your grid, understand your energy">
-        <img class="shot" src="portfolio-images/Picture2.jpg" width="599" height="352" alt="GridAI setup screen asking where the microgrid is located, with Nigeria, Australia, Germany and Canada as options" loading="lazy">
-        <img class="shot" src="portfolio-images/Picture3.jpg" width="610" height="371" alt="GridAI dashboard with a regional map, 48-hour forecast comparison and battery optimisation chart" loading="lazy">
-      </div>
-    </article>
 
     <div class="rows">
       <details class="row" open>
@@ -334,7 +283,49 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
           </div>
           <div class="shots">
             <img class="shot" src="portfolio-images/data%20AI%20app.png" width="1847" height="765" alt="AI Data Assistant summarising a 114,545-row weather dataset and filling missing values in one column, with a download button for the cleaned CSV" loading="lazy">
-            <img class="shot" src="portfolio-images/data%20AI%20app%202.png" width="1852" height="1142" alt="AI Data Assistant answering a question about missing values and outliers, with a bar chart of the results" loading="lazy" style="grid-column:1/-1">
+            <img class="shot" src="portfolio-images/data%20AI%20app%202.png" width="1852" height="1142" alt="AI Data Assistant answering a question about missing values and outliers, with a bar chart of the results" loading="lazy">
+          </div>
+        </div>
+      </details>
+
+      <details class="row">
+        <summary><h3>GridAI, smart microgrid analytics</h3><p class="tags">Python, machine learning, OAuth 2.0</p><span class="plus" aria-hidden="true"></span></summary>
+        <div class="row-body">
+          <div>
+            <p>A web app for analysing and optimising smart microgrids. It covers 16 years (2008–2024) of electricity demand, renewable generation and battery storage data across Nigeria, Australia, Germany and Canada, matched to ERA5 climate data for each region.</p>
+            <p>Inside, it compares 48-hour forecasts from Random Forest, Gradient Boosting and XGBoost models, optimises battery charging with linear programming, and flags anomalies with an ensemble. It runs in English and French, and Sign in with Apple, Google or Microsoft protects the production app.</p>
+            <p class="links">
+              <a class="link" href="https://ai-powered-smart-microgrid-web-app.vercel.app/login" target="_blank" rel="noopener">Open the live app</a>
+              <a class="link" href="https://github.com/Chioma-Nwankwo/AI-Powered-Smart-Microgrid_Web_App/tree/Branch_2" target="_blank" rel="noopener">View on GitHub</a>
+            </p>
+            <svg class="flow" id="flow" viewBox="0 0 540 150" role="img" aria-label="How GridAI works: energy data from 2008 to 2024 across four countries feeds forecasting and optimisation models, which power a web app with Apple, Google and Microsoft sign-in.">
+              <defs>
+                <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB86B"/><stop offset="1" stop-color="#FF6A5C"/></linearGradient>
+                <linearGradient id="gB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4128E6"/><stop offset="1" stop-color="#D83FB8"/></linearGradient>
+              </defs>
+              <rect class="n1" x="2" y="26" width="150" height="98" rx="12"/>
+              <text class="t" x="18" y="62">Energy data</text>
+              <text class="s" x="18" y="86">2008–2024</text>
+              <text class="s" x="18" y="106">4 countries</text>
+
+              <rect class="n2" x="195" y="26" width="150" height="98" rx="12"/>
+              <text class="t" x="211" y="62">Models</text>
+              <text class="s" x="211" y="86">Forecasts and battery</text>
+              <text class="s" x="211" y="106">optimisation</text>
+
+              <rect class="n3" x="388" y="26" width="150" height="98" rx="12"/>
+              <text class="t on-dark" x="404" y="62">Web app</text>
+              <text class="s on-dark" x="404" y="86">Apple, Google and</text>
+              <text class="s on-dark" x="404" y="106">Microsoft sign-in</text>
+
+              <path class="arrow" d="M158 75H188M181 68l7 7-7 7"/>
+              <path class="arrow b" d="M351 75H381M374 68l7 7-7 7"/>
+            </svg>
+          </div>
+          <div class="shots">
+            <img class="shot" src="portfolio-images/Picture1.jpg" width="612" height="374" alt="GridAI sign-in screen with the pitch: connect your grid, understand your energy" loading="lazy">
+            <img class="shot" src="portfolio-images/Picture2.jpg" width="599" height="352" alt="GridAI setup screen asking where the microgrid is located, with Nigeria, Australia, Germany and Canada as options" loading="lazy">
+            <img class="shot" src="portfolio-images/Picture3.jpg" width="610" height="371" alt="GridAI dashboard with a regional map, 48-hour forecast comparison and battery optimisation chart" loading="lazy">
           </div>
         </div>
       </details>
@@ -386,7 +377,7 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
 </section>
 
 <!-- EXPERIENCE -->
-<section class="section" id="experience" aria-labelledby="exp-t">
+<section class="section wash-a" id="experience" aria-labelledby="exp-t">
   <div class="section-grid">
     <h2 class="section-title" id="exp-t">Experience</h2>
     <div>
@@ -420,11 +411,11 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
 </section>
 
 <!-- SKILLS -->
-<section class="section section-alt" id="skills" aria-labelledby="skills-t">
+<section class="section wash-b" id="skills" aria-labelledby="skills-t">
   <div class="section-grid">
     <h2 class="section-title" id="skills-t">Skills</h2>
     <div class="skill-cols">
-      <div>
+      <div class="skill s1">
         <h3>Data and cloud</h3>
         <ul>
           <li>Python, SQL, R</li>
@@ -435,7 +426,7 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
           <li>Apache Iceberg</li>
         </ul>
       </div>
-      <div>
+      <div class="skill s2">
         <h3>AI and machine learning</h3>
         <ul>
           <li>Scikit-learn</li>
@@ -445,7 +436,7 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
           <li>Prompt engineering</li>
         </ul>
       </div>
-      <div>
+      <div class="skill s3">
         <h3>Building and shipping</h3>
         <ul>
           <li>HTML, CSS, JavaScript</li>
@@ -461,7 +452,7 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
 </section>
 
 <!-- CREDENTIALS -->
-<section class="section" id="credentials" aria-labelledby="cred-t">
+<section class="section wash-a" id="credentials" aria-labelledby="cred-t">
   <div class="section-grid">
     <h2 class="section-title" id="cred-t">Credentials</h2>
     <div>
@@ -495,7 +486,8 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact" aria-labelledby="contact-t">
+<section class="contact grain" id="contact" aria-labelledby="contact-t">
+  <div class="mesh" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i></div>
   <div class="wrap">
     <h2 id="contact-t">Looking for data engineering, AI engineering and data science roles.</h2>
     <p class="sub">Remote, worldwide. Internships and contract work are welcome.</p>
@@ -525,185 +517,99 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid #fff;outline
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var hero = document.getElementById("top");
-  var cv = document.getElementById("grid");
+  var cv = document.getElementById("streams");
   var ctx = cv.getContext("2d");
-  var slider = document.getElementById("hour");
-  var elClock = document.getElementById("clock");
-  var elState = document.getElementById("state");
-  var elSolar = document.getElementById("vSolar");
-  var elDemand = document.getElementById("vDemand");
-  var elBatt = document.getElementById("vBatt");
   var copy = document.getElementById("copy");
-  var bar = document.getElementById("bar");
+  var stages = document.getElementById("stages");
   var nav = document.getElementById("nav");
 
-  /* ---- an illustrative microgrid day (not real data) ---- */
-  var N = 288, DT = 24 / N, GAIN = 1.8, KCHG = 0.13, FLOOR = 0.05;
-  function sol(h) { var x = (h - 6) / 12; return (x <= 0 || x >= 1) ? 0 : Math.pow(Math.sin(Math.PI * x), 1.4); }
-  function g(h, c, w) { var d = (h - c) / w; return Math.exp(-d * d); }
-  function dem(h) { return (0.34 + 0.20 * g(h, 7.5, 1.6) + 0.44 * g(h, 19.5, 2.0) + 0.07 * g(h, 13, 3)) / 0.9; }
-  var batt = [];
-  (function simulate() {
-    var soc = 0.4, i, pass, h, net;
-    for (pass = 0; pass < 3; pass++) {
-      for (i = 0; i <= N; i++) {
-        h = i * DT;
-        net = sol(h) * GAIN - dem(h);
-        soc = Math.min(1, Math.max(FLOOR, soc + net * KCHG * DT));
-        if (pass === 2) batt[i] = soc;
-      }
-    }
-  })();
-  function battAt(h) {
-    var f = h / DT, i = Math.floor(f), t = f - i;
-    if (i >= N) return batt[N];
-    return batt[i] * (1 - t) + batt[i + 1] * t;
+  /* ---- streams: messy on the left, ordered on the right ---- */
+  var R = 46, rib = [], i;
+  var seed = 11;
+  function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+  for (i = 0; i < R; i++) {
+    rib.push({ k: i / (R - 1), a: 4 + rnd() * 4, b: 9 + rnd() * 6, s1: 0.35 + rnd() * 0.5, s2: 0.5 + rnd() * 0.6, p1: rnd() * 6.283, p2: rnd() * 6.283, dot: i % 3 === 0, off: rnd() });
   }
+  var stops = [[65, 40, 230], [123, 60, 242], [216, 63, 184], [255, 106, 92], [255, 184, 107]];
+  function colour(k) {
+    var f = k * (stops.length - 1), j = Math.min(stops.length - 2, Math.floor(f)), t = f - j, a = stops[j], b = stops[j + 1];
+    return [Math.round(a[0] + (b[0] - a[0]) * t), Math.round(a[1] + (b[1] - a[1]) * t), Math.round(a[2] + (b[2] - a[2]) * t)];
+  }
+  for (i = 0; i < R; i++) rib[i].c = colour(rib[i].k);
   function smooth(a, b, x) { var t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); }
 
-  /* ---- geometry ---- */
-  var W = 0, H = 0, dpr = 1, x0 = 0, x1 = 0, yTop = 0, yBot = 0, cur = 13, stars = [];
-  function seedStars() {
-    var s = 7, r = function () { s = (s * 16807) % 2147483647; return s / 2147483647; };
-    stars = [];
-    for (var i = 0; i < 90; i++) stars.push({ x: r(), y: r(), a: 0.3 + r() * 0.6, s: 0.6 + r() * 1.3 });
-  }
-  seedStars();
+  var W = 0, H = 0, dpr = 1, yc = 0, band = 200, x0 = 0, x1 = 0;
+  var px = -999, py = 0, pull = 0, pullTarget = 0;
   function measure() {
     var hr = hero.getBoundingClientRect();
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = hr.width; H = hr.height;
     cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var br = bar.getBoundingClientRect();
-    var cr = copy.getBoundingClientRect();
-    var pad = parseFloat(getComputedStyle(bar).paddingLeft) || 20;
-    x0 = pad + 11; x1 = W - pad - 11;
-    yBot = br.top - hr.top - 30;
-    yTop = Math.max(cr.bottom - hr.top + 26, yBot - 520);
-    if (yBot - yTop < 170) yTop = yBot - 170;
+    var top = copy.getBoundingClientRect().bottom - hr.top + 34;
+    var bot = stages.getBoundingClientRect().top - hr.top - 30;
+    if (bot - top < 200) top = bot - 200;
+    yc = (top + bot) / 2; band = (bot - top);
+    x0 = 0; x1 = W;
   }
-
-  /* ---- drawing ---- */
-  function X(h) { return x0 + (h / 24) * (x1 - x0); }
-  function Y(v) { return yBot - v * (yBot - yTop); }
-  function trace(fn, scale) {
-    ctx.beginPath();
-    for (var i = 0; i <= N; i++) {
-      var h = i * DT, v = fn(h, i) * scale;
-      if (i === 0) ctx.moveTo(X(h), Y(v)); else ctx.lineTo(X(h), Y(v));
-    }
+  function yAt(r, u, t, x) {
+    var e = smooth(0.06, 0.82, u), ch = 1 - e;
+    var chaos = Math.sin(u * r.a * 3.1416 + t * r.s1 + r.p1) * 0.62 + Math.sin(u * r.b * 3.1416 - t * r.s2 + r.p2) * 0.38;
+    var spread = (r.k - 0.5) * band * (0.62 - 0.26 * e);
+    var wob = chaos * band * 0.2 * Math.pow(ch, 1.1);
+    var wave = Math.sin(u * 3.2 * 3.1416 + t * 0.5 + r.k * 1.4) * band * 0.06 * e;
+    var y = yc + spread + wob + wave;
+    if (pull > 0.001) { var d = (x - px) / 170; y += (py - y) * pull * 0.42 * Math.exp(-d * d); }
+    return y;
   }
-  function render(h) {
-    cur = h;
-    var s = sol(h), d = dem(h), b = battAt(h), f = smooth(0, 0.45, Math.sqrt(s));
-    // sky
-    var r = Math.round(7 + (34 - 7) * f), gg = Math.round(11 + (48 - 11) * f), bb = Math.round(46 + (240 - 46) * f);
-    hero.style.backgroundColor = "rgb(" + r + "," + gg + "," + bb + ")";
+  function frame(t) {
     ctx.clearRect(0, 0, W, H);
-    // stars
-    var k, st;
-    for (k = 0; k < stars.length; k++) {
-      st = stars[k];
-      ctx.globalAlpha = (1 - f) * st.a;
-      ctx.fillStyle = "#fff";
-      ctx.beginPath(); ctx.arc(st.x * W, st.y * (yBot - 10), st.s, 0, 6.283); ctx.fill();
-    }
-    ctx.globalAlpha = 1;
-    var cx = X(h);
-    // hour ticks
-    ctx.font = "500 12px 'Hanken Grotesk', system-ui, sans-serif";
-    ctx.textBaseline = "top";
-    ctx.fillStyle = "rgba(255,255,255,.7)";
-    var ticks = [0, 6, 12, 18, 24], t;
-    for (t = 0; t < ticks.length; t++) {
-      var tx = X(ticks[t]), lab = (ticks[t] === 24 ? "00" : (ticks[t] < 10 ? "0" : "") + ticks[t]) + ":00";
-      ctx.textAlign = t === 0 ? "left" : (t === ticks.length - 1 ? "right" : "center");
-      ctx.fillText(lab, tx + (t === 0 ? -6 : (t === ticks.length - 1 ? 6 : 0)), yBot + 10);
-      ctx.fillRect(tx - 0.5, yBot, 1, 6);
-    }
-    ctx.fillRect(x0, yBot, x1 - x0, 1);
-    // solar area: whole day faint, elapsed part bright
-    var grad = ctx.createLinearGradient(0, yTop, 0, yBot);
-    grad.addColorStop(0, "rgba(255,176,32,.98)");
-    grad.addColorStop(1, "rgba(255,176,32,.18)");
-    function solarArea() {
-      ctx.beginPath(); ctx.moveTo(X(0), yBot);
-      for (var i = 0; i <= N; i++) { var hh = i * DT; ctx.lineTo(X(hh), Y(sol(hh))); }
-      ctx.lineTo(X(24), yBot); ctx.closePath();
-    }
-    ctx.save(); solarArea(); ctx.fillStyle = "rgba(255,176,32,.16)"; ctx.fill(); ctx.restore();
-    ctx.save(); ctx.beginPath(); ctx.rect(0, 0, cx, H); ctx.clip(); solarArea(); ctx.fillStyle = grad; ctx.fill(); ctx.restore();
-    // lines: faint ahead of the cursor, bright behind it
-    function lines(alpha, clipLeft) {
-      ctx.save();
+    ctx.globalCompositeOperation = "lighter";
+    ctx.lineJoin = "round"; ctx.lineCap = "round";
+    var step = Math.max(6, Math.round(W / 190)), j, r, x, y, u;
+    for (j = 0; j < R; j++) {
+      r = rib[j];
       ctx.beginPath();
-      if (clipLeft) ctx.rect(0, 0, cx, H); else ctx.rect(cx, 0, W - cx, H);
-      ctx.clip();
-      ctx.lineJoin = "round"; ctx.lineCap = "round";
-      trace(dem, 0.87 / 0.87); ctx.lineWidth = 3; ctx.strokeStyle = "rgba(255,255,255," + alpha + ")"; ctx.stroke();
-      trace(function (hh, i) { return batt[i]; }, 1); ctx.lineWidth = 3; ctx.strokeStyle = "rgba(124,240,201," + alpha + ")"; ctx.stroke();
-      ctx.restore();
+      for (x = x0; x <= x1 + step; x += step) { u = x / W; y = yAt(r, u, t, x); if (x === x0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = "rgba(" + r.c[0] + "," + r.c[1] + "," + r.c[2] + ",.62)";
+      ctx.stroke();
     }
-    lines(0.3, false); lines(1, true);
-    // cursor
-    ctx.fillStyle = "rgba(255,255,255,.55)";
-    ctx.fillRect(cx - 0.5, yTop - 18, 1, yBot - yTop + 18);
-    var my = Y(s);
-    if (s > 0.01) {
-      var glow = ctx.createRadialGradient(cx, my, 0, cx, my, 46);
-      glow.addColorStop(0, "rgba(255,200,90,.65)"); glow.addColorStop(1, "rgba(255,200,90,0)");
-      ctx.fillStyle = glow; ctx.beginPath(); ctx.arc(cx, my, 46, 0, 6.283); ctx.fill();
-      ctx.fillStyle = "#FFB020"; ctx.beginPath(); ctx.arc(cx, my, 10, 0, 6.283); ctx.fill();
-      ctx.lineWidth = 3; ctx.strokeStyle = "#fff"; ctx.stroke();
-    } else {
-      ctx.fillStyle = "#dfe4ff"; ctx.beginPath(); ctx.arc(cx, yTop - 18, 8, 0, 6.283); ctx.fill();
-      ctx.fillStyle = "rgba(10,15,70,.9)"; ctx.beginPath(); ctx.arc(cx + 4, yTop - 21, 7, 0, 6.283); ctx.fill();
+    for (j = 0; j < R; j++) {
+      r = rib[j]; if (!r.dot) continue;
+      u = (t * 0.045 + r.off) % 1; x = u * W; y = yAt(r, u, t, x);
+      var rad = 2 + smooth(0.3, 0.9, u) * 2.2;
+      var g = ctx.createRadialGradient(x, y, 0, x, y, rad * 5);
+      g.addColorStop(0, "rgba(255,240,225,.95)"); g.addColorStop(0.25, "rgba(" + r.c[0] + "," + r.c[1] + "," + r.c[2] + ",.55)"); g.addColorStop(1, "rgba(" + r.c[0] + "," + r.c[1] + "," + r.c[2] + ",0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, rad * 5, 0, 6.283); ctx.fill();
     }
-    // readout
-    var hh = Math.floor(h), mm = Math.floor((h - hh) * 60 / 5) * 5;
-    var clockTxt = (hh < 10 ? "0" : "") + hh + ":" + (mm < 10 ? "0" : "") + mm;
-    var sp = Math.round(s * 100), dp = Math.round(d / 0.87 * 100), bp = Math.round(b * 100);
-    var supply = s * GAIN, msg;
-    if (supply > d + 0.04) msg = b > 0.97 ? "The battery is full and surplus solar goes unused." : "Surplus solar is charging the battery.";
-    else if (b > FLOOR + 0.03) msg = "The battery is covering demand.";
-    else msg = "The battery is empty and backup power is covering demand.";
-    elClock.textContent = clockTxt;
-    elSolar.textContent = sp + "%"; elDemand.textContent = dp + "%"; elBatt.textContent = bp + "%";
-    elState.textContent = msg;
-    slider.setAttribute("aria-valuetext", clockTxt + ". Solar " + sp + " percent, demand " + dp + " percent, battery " + bp + " percent. " + msg);
+    ctx.globalCompositeOperation = "source-over";
   }
-  function setHour(h) { slider.value = h; render(h); }
 
-  /* ---- interaction ---- */
-  var auto = null;
-  function stopAuto() { if (auto) { cancelAnimationFrame(auto); auto = null; } }
-  function fromX(clientX) {
-    var rect = cv.getBoundingClientRect();
-    var t = (clientX - rect.left - x0) / (x1 - x0);
-    setHour(Math.min(24, Math.max(0, t * 24)));
+  var running = false, raf = 0, t0 = performance.now();
+  function loop(now) {
+    pull += (pullTarget - pull) * 0.08;
+    frame(((now - t0) / 1000) * 0.9 + 2);
+    raf = requestAnimationFrame(loop);
   }
-  cv.addEventListener("pointerdown", function (e) { stopAuto(); try { cv.setPointerCapture(e.pointerId); } catch (_) {} fromX(e.clientX); });
-  cv.addEventListener("pointermove", function (e) { if (e.pointerType === "mouse" || e.buttons) { stopAuto(); fromX(e.clientX); } });
-  slider.addEventListener("input", function () { stopAuto(); render(parseFloat(slider.value)); });
+  function start() { if (!running && !reduce) { running = true; raf = requestAnimationFrame(loop); } }
+  function stop() { running = false; cancelAnimationFrame(raf); }
 
-  function relayout() { measure(); render(cur); }
+  hero.addEventListener("pointermove", function (e) {
+    var r = hero.getBoundingClientRect();
+    px = e.clientX - r.left; py = e.clientY - r.top; pullTarget = 1;
+  });
+  hero.addEventListener("pointerleave", function () { pullTarget = 0; });
+  hero.addEventListener("pointerup", function (e) { if (e.pointerType !== "mouse") pullTarget = 0; });
+
+  function relayout() { measure(); if (reduce) frame(5.5); }
   if (window.ResizeObserver) new ResizeObserver(relayout).observe(hero); else window.addEventListener("resize", relayout);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
-
   measure();
-  if (reduce) { setHour(12); }
-  else {
-    var from = 4.5, to = 13, dur = 7000, t0 = null;
-    setHour(from);
-    var step = function (ts) {
-      if (t0 === null) t0 = ts;
-      var p = Math.min(1, (ts - t0) / dur), e = 1 - Math.pow(1 - p, 3);
-      setHour(from + (to - from) * e);
-      auto = p < 1 ? requestAnimationFrame(step) : null;
-    };
-    auto = requestAnimationFrame(function (ts) { setTimeout(function () { auto = requestAnimationFrame(step); }, 350); });
-  }
+  if (reduce) frame(5.5);
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (en) { en[0].isIntersecting ? start() : stop(); }, { threshold: 0.02 }).observe(hero);
+  } else { start(); }
+  document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else if (!reduce) start(); });
 
   /* ---- nav colour once past the hero ---- */
   var ticking = false;
