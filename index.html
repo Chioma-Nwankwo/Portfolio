@@ -3,501 +3,445 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chioma Esther Nwankwo | Data and AI engineer</title>
+<title>Chioma Esther Nwankwo | Data engineer and AI engineer</title>
 <meta name="description" content="Portfolio of Chioma Esther Nwankwo, a computer science graduate in Abuja building data pipelines, machine learning models and AI apps. Open to remote roles worldwide.">
-<meta name="theme-color" content="#0E0522">
-<meta property="og:title" content="Chioma Esther Nwankwo | Data and AI engineer">
+<meta name="theme-color" content="#080C2E">
+<meta property="og:title" content="Chioma Esther Nwankwo | Data engineer and AI engineer">
 <meta property="og:description" content="Data pipelines, machine learning models and AI apps. Open to remote roles worldwide.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237B3CF2'/%3E%3Cstop offset='.55' stop-color='%23D83FB8'/%3E%3Cstop offset='1' stop-color='%23FFB86B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111A58'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%238FB0FF' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%23FF4FA3'/%3E%3C/svg%3E">
 
 <style>
-@font-face{font-family:"Anybody";src:url("fonts/anybody-latin-wdth-normal.woff2") format("woff2");font-weight:100 900;font-stretch:50% 150%;font-style:normal;font-display:swap}
+@font-face{font-family:"Bricolage";src:url("fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
 @font-face{font-family:"Hanken Grotesk";src:url("fonts/hanken-grotesk-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
 
 :root{
-  --plum:#0E0522;
-  --ink:#160B33;
-  --indigo:#4128E6;
-  --violet:#7B3CF2;
-  --magenta:#D83FB8;
-  --coral:#FF6A5C;
-  --apricot:#FFB86B;
-  --teal:#12B8A9;
-  --wash-a:#F6F2FF;
-  --wash-b:#FFF2EA;
-  --mute:#5C5080;
-  --line:rgba(22,11,51,.14);
-  --warm:linear-gradient(90deg,var(--magenta),var(--coral) 60%,var(--apricot));
-  --cool:linear-gradient(90deg,var(--indigo),var(--violet) 55%,var(--magenta));
+  --vat:#080C2E;
+  --i9:#0F1752;
+  --i8:#162070;
+  --i7:#1D2B8C;
+  --azure:#2F6BFF;
+  --sky:#8FB0FF;
+  --pink:#FF4FA3;
+  --sun:#FFD23F;
+  --green:#0B2E25;
+  --green2:#10402F;
+  --chalk:#EEF0F7;
+  --soft:#C5CCEC;
+  --line:rgba(143,176,255,.22);
   --gutter:clamp(20px,5vw,72px);
-  --display:"Anybody","Arial Narrow",system-ui,sans-serif;
+  --display:"Bricolage","Arial Narrow",system-ui,sans-serif;
   --text:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--wash-a);color:var(--ink);font:400 1.0625rem/1.6 var(--text);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--vat);color:var(--chalk);font:400 1.0625rem/1.6 var(--text);-webkit-font-smoothing:antialiased}
 img{max-width:100%}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:3px}
-.hero :focus-visible,.contact :focus-visible,.nav:not(.solid) :focus-visible{outline-color:var(--apricot)}
-.skip{position:absolute;left:-999px;top:8px;background:var(--apricot);color:var(--ink);padding:10px 14px;z-index:50;font-weight:600}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--sun);color:var(--vat);padding:10px 14px;z-index:60;font-weight:600}
 .skip:focus{left:8px}
+button{font:inherit;color:inherit;cursor:pointer}
 
 /* ---------- navigation ---------- */
-.nav{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:16px var(--gutter);color:#fff;transition:background-color .3s,color .3s,box-shadow .3s}
-.nav.solid{background:rgba(246,242,255,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
-.wordmark{font:700 1.15rem/1 var(--display);text-decoration:none;letter-spacing:-.005em}
-.nav-links{display:flex;gap:clamp(16px,2.6vw,34px)}
-.nav-links a{text-decoration:none;font-weight:500;font-size:.98rem;padding:6px 0;background:var(--warm) 0 100%/0 2px no-repeat;transition:background-size .25s}
-.nav-links a:hover{background-size:100% 2px}
+.nav{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px var(--gutter);background:rgba(8,12,46,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.mono{display:inline-block;font:800 1.05rem/1 var(--display);letter-spacing:.02em;border:1.5px solid var(--sky);border-radius:9px;padding:7px 10px;text-decoration:none;color:var(--chalk)}
+.mono:hover{border-color:var(--pink);color:var(--pink)}
+.nav-links{display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);font-size:.97rem}
+.nav-links a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.nav-links a:hover{border-bottom-color:var(--pink)}
+.nav-links .cvbtn{border:1.5px solid var(--sky);border-radius:9px;padding:7px 14px;font-weight:600;background:none}
+.nav-links .cvbtn:hover{border-color:var(--sun);color:var(--sun)}
 
-/* ---------- shared mesh gradient (hero and contact) ---------- */
-.mesh{position:absolute;inset:0;z-index:-3;overflow:hidden;background:var(--plum)}
-.mesh i{position:absolute;border-radius:50%;will-change:transform}
-.mesh .m1{width:62vw;height:62vw;max-width:980px;max-height:980px;left:-14vw;top:-26vw;background:radial-gradient(closest-side,rgba(65,40,230,.85),rgba(65,40,230,0));animation:drift1 26s ease-in-out infinite alternate}
-.mesh .m2{width:56vw;height:56vw;max-width:880px;max-height:880px;right:-18vw;top:-8vw;background:radial-gradient(closest-side,rgba(216,63,184,.62),rgba(216,63,184,0));animation:drift2 31s ease-in-out infinite alternate}
-.mesh .m3{width:60vw;height:48vw;max-width:940px;max-height:760px;right:6vw;bottom:-24vw;background:radial-gradient(closest-side,rgba(255,106,92,.55),rgba(255,106,92,0));animation:drift3 29s ease-in-out infinite alternate}
-.mesh .m4{width:44vw;height:44vw;max-width:700px;max-height:700px;left:12vw;bottom:-22vw;background:radial-gradient(closest-side,rgba(123,60,242,.6),rgba(123,60,242,0));animation:drift1 34s ease-in-out infinite alternate-reverse}
-@keyframes drift1{to{transform:translate(6vw,5vw) scale(1.12)}}
-@keyframes drift2{to{transform:translate(-7vw,6vw) scale(.92)}}
-@keyframes drift3{to{transform:translate(-9vw,-5vw) scale(1.1)}}
-.grain::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.1;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+/* ---------- shared ---------- */
+.btn{display:inline-block;padding:.72em 1.2em;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--sky);background:none;color:var(--chalk);line-height:1.3}
+.btn:hover{border-color:var(--sun);color:var(--sun)}
+.btn-main{background:var(--sun);border-color:var(--sun);color:var(--vat)}
+.btn-main:hover{background:#ffe27a;border-color:#ffe27a;color:var(--vat)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.chips li{font-size:.9rem;padding:5px 12px;border-radius:999px;border:1px solid rgba(143,176,255,.4);line-height:1.3}
+.chips li.live{color:var(--sun);border-color:rgba(255,210,63,.65)}
+.chips li.live::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:7px}
+.section{padding:clamp(64px,9vw,120px) var(--gutter)}
+.wrap{max-width:1360px;margin:0 auto}
+.section-title{margin:0 0 clamp(28px,4vw,52px);font:700 clamp(2rem,3.6vw,3rem)/1 var(--display);letter-spacing:-.025em}
+.section-title::after{content:"";display:block;width:56px;height:5px;margin-top:14px;border-radius:3px;background:var(--pink)}
+.on-vat{background:var(--vat)}
+.on-indigo{background:linear-gradient(180deg,var(--i9),#0C1340)}
+.on-green{background:var(--green)}
+.tag{display:inline-block;font-size:.85rem;padding:3px 10px;border-radius:999px;background:rgba(143,176,255,.14);color:var(--soft);margin:0 6px 6px 0}
+.on-green .tag{background:rgba(255,255,255,.1)}
+.links{display:flex;flex-wrap:wrap;gap:8px 24px;margin:1.1rem 0 0}
+.link{font-weight:600;text-decoration:none;border-bottom:2px solid var(--pink);padding-bottom:2px}
+.link:hover{border-bottom-color:var(--sun);color:var(--sun)}
 
-/* ---------- hero: raw data in, something usable out ---------- */
-.hero{position:relative;isolation:isolate;overflow:hidden;min-height:max(100svh,700px);display:flex;flex-direction:column;color:#fff}
-#streams{position:absolute;inset:0;width:100%;height:100%;z-index:-2;touch-action:pan-y}
-.hero-copy{padding:clamp(88px,12vh,130px) var(--gutter) 0;pointer-events:none}
-.hero-copy a{pointer-events:auto}
-.hero h1{margin:0;font:800 clamp(2.9rem,7.2vw,7.6rem)/.92 var(--display);letter-spacing:-.025em;font-stretch:100%}
-.hero h1 span{display:inline-block;margin-right:.2em;animation:widen 1.1s cubic-bezier(.2,.8,.2,1) both}
-.hero h1 span:nth-child(2){animation-delay:.08s}
-.hero h1 span:nth-child(3){display:block;margin-right:0;animation-delay:.16s}
-@keyframes widen{from{font-stretch:55%;opacity:0;transform:translateY(.12em)}to{font-stretch:100%;opacity:1;transform:none}}
-.lede{margin:1rem 0 1.3rem;max-width:42ch;font-size:clamp(1.1rem,1.7vw,1.4rem);line-height:1.4;color:rgba(255,255,255,.92)}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin:0}
-.btn{display:inline-block;padding:.72em 1.2em;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s,border-color .2s,background-color .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-warm{background:linear-gradient(100deg,var(--apricot),var(--coral));color:var(--ink)}
-.btn-warm:hover{box-shadow:0 8px 28px rgba(255,106,92,.45)}
-.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
-.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12)}
-.hero-gap{pointer-events:none;flex:1 1 auto;min-height:clamp(250px,38vh,460px)}
-.stages{position:relative;margin:0 var(--gutter) 22px;padding-top:10px;border-top:1px solid rgba(255,255,255,.28);display:flex;justify-content:space-between;font-size:.95rem;color:rgba(255,255,255,.85);pointer-events:none}
-.stages span{position:relative}
-.stages span::before{content:"";position:absolute;left:0;top:-15px;width:1px;height:9px;background:rgba(255,255,255,.55)}
-.stages span:last-child::before{left:auto;right:0}
-.stages span:last-child{text-align:right}
+/* ---------- hero ---------- */
+.hero{min-height:calc(100svh - 62px);display:flex;flex-direction:column;padding:0 var(--gutter);background:radial-gradient(110% 90% at 82% 8%,var(--i7) 0%,var(--i9) 40%,var(--vat) 78%)}
+.hero-grid{flex:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(28px,5vh,56px) 0 28px}
+.hero h1{margin:0;font:700 clamp(3rem,6vw,5.8rem)/.95 var(--display);letter-spacing:-.035em}
+.role{margin:16px 0 18px;font:600 clamp(1.2rem,1.9vw,1.65rem)/1.25 var(--display);color:var(--pink)}
+.sum{margin:0 0 20px;max-width:54ch;color:var(--soft);font-size:1.1rem}
+.seek{margin:0 0 26px;max-width:54ch;padding-left:16px;border-left:3px solid var(--sun)}
+.seek b{display:block;color:var(--sun);font-weight:600;font-size:.92rem;margin-bottom:2px}
+.art{position:relative;aspect-ratio:1/1;max-height:600px;width:100%;justify-self:end;border-radius:22px;overflow:hidden;border:1px solid rgba(143,176,255,.4);background:var(--i9);box-shadow:0 30px 80px -30px rgba(0,0,0,.75)}
+.art svg{display:block;width:100%;height:100%}
+.art .ink{position:absolute;border-radius:50%;mix-blend-mode:screen;pointer-events:none}
+.art .ink.p{width:46%;aspect-ratio:1;right:-6%;bottom:-8%;background:var(--pink);opacity:.62}
+.art .ink.b{width:40%;aspect-ratio:1;right:22%;bottom:-14%;background:var(--azure);opacity:.7}
+.art .ink.y{width:20%;aspect-ratio:1;left:-5%;top:-5%;background:var(--sun);opacity:.55}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0;padding:22px 0 30px;border-top:1px solid var(--line)}
+.facts dt{font-size:.88rem;color:var(--sky);margin-bottom:3px}
+.facts dd{margin:0;font-weight:600}
 
-/* ---------- sections ---------- */
-.section{padding:clamp(72px,10vw,140px) var(--gutter)}
-.wash-a{background:linear-gradient(180deg,var(--wash-a),#EEE7FF)}
-.wash-b{background:linear-gradient(180deg,var(--wash-b),#FFE9F0)}
-.section-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,64px);max-width:1400px;margin:0 auto}
-.section-title{margin:0;font:800 clamp(2rem,3.5vw,3rem)/1 var(--display);letter-spacing:-.02em;overflow-wrap:anywhere}
-.section-title::after{content:"";display:block;width:56px;height:5px;margin-top:14px;border-radius:3px;background:var(--cool)}
-.wash-b .section-title::after{background:var(--warm)}
-.wrap{max-width:1400px;margin:0 auto}
-.about-lead{margin:0 0 1.4rem;max-width:44ch;font-size:clamp(1.4rem,2.5vw,2.1rem);line-height:1.3;font-weight:500;letter-spacing:-.01em}
-.about-more{margin:0;max-width:60ch;color:var(--mute);font-size:1.1rem}
+/* ---------- work ---------- */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.card{background:var(--i9);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column}
+.card.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px}
+.card h3{margin:0 0 .6rem;font:700 clamp(1.4rem,2.2vw,1.8rem)/1.15 var(--display);letter-spacing:-.015em}
+.card p{margin:0 0 .9rem;max-width:62ch;color:var(--soft)}
+.card .tags{margin:0 0 .4rem}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;align-content:start}
+.shots .zoom:first-child{grid-column:1/-1}
+.card.wide .shots{margin-bottom:0;grid-template-columns:1fr 1fr}
+.card.wide .shots .zoom:first-child{grid-column:1/-1}
+.zoom{display:block;padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;line-height:0}
+.zoom:hover{border-color:var(--sun)}
+.zoom img{display:block;width:100%;height:auto}
+.small-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:22px}
+.small-cards .card{background:var(--i8)}
+.note{margin:1.1rem 0 0;color:var(--soft);font-size:.95rem}
 
-/* work */
-.work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(24px,4vw,48px)}
-.work-head p{margin:0;color:var(--mute)}
-.links{display:flex;flex-wrap:wrap;gap:10px 26px;margin:1.3rem 0 0}
-.link{display:inline-block;font-weight:600;text-decoration:none;padding-bottom:3px;background:var(--warm) 0 100%/100% 3px no-repeat;transition:background-size .25s,color .25s}
-.link:hover{background-size:100% 100%;color:var(--ink)}
-.row{border-top:1px solid var(--line)}
-.row:last-child{border-bottom:1px solid var(--line)}
-.row summary{list-style:none;display:grid;grid-template-columns:1fr auto 26px;gap:8px 28px;align-items:center;padding:26px 14px;margin:0 -14px;border-radius:14px;cursor:pointer;transition:background-color .3s}
-.row summary::-webkit-details-marker{display:none}
-.row summary:hover{background:linear-gradient(90deg,rgba(123,60,242,.10),rgba(216,63,184,.08) 55%,rgba(255,106,92,.10))}
-.row h3{margin:0;font:700 clamp(1.5rem,3vw,2.4rem)/1.1 var(--display);letter-spacing:-.015em;transition:transform .25s}
-.row summary:hover h3{transform:translateX(8px)}
-.row .tags{margin:0;color:var(--mute);font-size:.95rem;text-align:right}
-.plus{position:relative;width:18px;height:18px;justify-self:end;color:var(--violet)}
-.plus::before,.plus::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:currentColor;transition:transform .3s}
-.plus::after{transform:rotate(90deg)}
-.row[open] .plus::after{transform:rotate(0)}
-.row-body{display:grid;grid-template-columns:1fr 1fr;gap:28px 48px;padding:6px 0 40px;animation:openrow .4s ease both}
-@keyframes openrow{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-.row-body p{margin:0 0 1rem;max-width:54ch}
-.row-body .links{margin-top:1.2rem}
-.row-body.solo{grid-template-columns:minmax(0,1fr)}
-.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
-.shots img:first-child{grid-column:1/-1}
-.shot{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;box-shadow:0 14px 40px -18px rgba(65,40,230,.45)}
-.flow{display:block;width:100%;max-width:540px;height:auto;margin-top:1.8rem;overflow:visible}
-.flow rect{stroke:var(--ink);stroke-width:1.5}
-.flow .n1{fill:url(#gA)}
-.flow .n2{fill:#fff}
-.flow .n3{fill:url(#gB);stroke:none}
-.flow text{font-family:var(--text);fill:var(--ink)}
-.flow .t{font-size:17px;font-weight:700}
-.flow .s{font-size:13px;font-weight:500}
-.flow .on-dark{fill:#fff}
-.flow .arrow{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60}
-.flow.in .arrow{animation:draw .9s .2s ease forwards}
-.flow.in .arrow.b{animation-delay:.7s}
-@keyframes draw{to{stroke-dashoffset:0}}
-
-/* experience */
+/* ---------- experience ---------- */
 .xp{display:grid;grid-template-columns:190px 1fr;gap:12px 28px;padding:30px 0;border-top:1px solid var(--line)}
 .xp:last-of-type{border-bottom:1px solid var(--line)}
-.xp time{color:var(--mute);font-weight:500}
+.xp time{color:var(--sky);font-weight:500}
 .xp h3{margin:0;font:700 clamp(1.4rem,2.4vw,1.9rem)/1.15 var(--display);letter-spacing:-.01em}
-.xp .org{margin:.2rem 0 1rem;color:var(--mute)}
-.xp ul{margin:0;padding-left:1.15rem;max-width:62ch}
+.xp .org{margin:.2rem 0 1rem;color:var(--soft)}
+.xp ul{margin:0;padding-left:1.15rem;max-width:66ch}
 .xp li{margin-bottom:.55rem}
-.xp li::marker{color:var(--magenta)}
-.edu{margin:1.6rem 0 0;color:var(--mute)}
-.edu strong{color:var(--ink)}
+.xp li::marker{color:var(--pink)}
+.edu{margin:1.6rem 0 0;color:var(--soft)}
+.edu strong{color:var(--chalk)}
 
-/* skills */
-.skill-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.skill{padding:22px 22px 12px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid rgba(22,11,51,.08);position:relative;overflow:hidden}
-.skill::before{content:"";position:absolute;left:0;right:0;top:0;height:6px}
-.skill.s1::before{background:linear-gradient(90deg,var(--indigo),var(--violet))}
-.skill.s2::before{background:linear-gradient(90deg,var(--violet),var(--magenta))}
-.skill.s3::before{background:linear-gradient(90deg,var(--magenta),var(--coral),var(--apricot))}
-.skill h3{margin:6px 0 .8rem;font:700 1.3rem/1.1 var(--display);letter-spacing:-.01em}
+/* ---------- skills ---------- */
+.skill-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.skill{padding:20px 20px 10px;border-radius:16px;background:var(--green2);border:1px solid rgba(255,255,255,.12);position:relative;overflow:hidden}
+.skill::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--pink)}
+.skill.k2::before{background:var(--sun)}
+.skill.k3::before{background:var(--azure)}
+.skill.k4::before{background:var(--sky)}
+.skill h3{margin:6px 0 .8rem;font:700 1.2rem/1.15 var(--display);letter-spacing:-.01em}
 .skill ul{list-style:none;margin:0;padding:0}
-.skill li{padding:9px 0;border-top:1px solid var(--line)}
+.skill li{padding:8px 0;border-top:1px solid rgba(255,255,255,.14)}
 
-/* credentials */
+/* ---------- credentials ---------- */
 .cred{display:grid;grid-template-columns:1fr auto;gap:6px 28px;padding:24px 0;border-top:1px solid var(--line)}
 .cred:last-child{border-bottom:1px solid var(--line)}
 .cred h3{margin:0;font:700 1.3rem/1.25 var(--display);letter-spacing:-.005em}
-.cred p{grid-column:1;margin:0;max-width:62ch;color:var(--mute)}
+.cred p{grid-column:1;margin:0;max-width:64ch;color:var(--soft)}
 .status{display:flex;align-items:center;gap:8px;font-weight:600;white-space:nowrap}
-.status i{width:10px;height:10px;border-radius:50%;background:var(--teal);display:inline-block}
-.status.wip i{background:var(--apricot)}
+.status i{width:10px;height:10px;border-radius:50%;background:var(--azure);display:inline-block}
+.status.wip i{background:var(--sun)}
+.status.on i{background:var(--pink)}
 
-/* contact */
-.contact{position:relative;isolation:isolate;overflow:hidden;color:#fff;padding:clamp(80px,11vw,160px) var(--gutter) clamp(56px,7vw,96px)}
-.contact h2{margin:0;max-width:15em;font:800 clamp(2.3rem,6vw,5.2rem)/.98 var(--display);letter-spacing:-.025em}
-.contact .sub{margin:1.4rem 0 0;max-width:40ch;font-size:1.2rem;color:rgba(255,255,255,.92)}
-.mail{display:inline-block;margin-top:clamp(28px,4vw,48px);font:700 clamp(1.4rem,4vw,3rem)/1.1 var(--display);letter-spacing:-.015em;text-decoration:none;padding-bottom:6px;word-break:break-all;background:linear-gradient(90deg,var(--apricot),var(--coral),var(--magenta)) 0 100%/100% 4px no-repeat;transition:background-size .25s}
-.mail:hover{background-size:100% 100%;color:var(--ink)}
-.contact-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;margin-top:clamp(40px,6vw,80px);align-items:flex-end}
-.contact-links{display:flex;flex-wrap:wrap;gap:12px}
+/* ---------- contact ---------- */
+.contact{position:relative;isolation:isolate;overflow:hidden;background:var(--green);padding:clamp(72px,10vw,150px) var(--gutter) clamp(48px,6vw,80px)}
+.contact .ink{position:absolute;z-index:-1;border-radius:50%;mix-blend-mode:screen;pointer-events:none}
+.contact .c1{width:min(420px,34vw);aspect-ratio:1;right:6%;top:8%;background:var(--pink);opacity:.8}
+.contact .c2{width:min(340px,28vw);aspect-ratio:1;right:21%;top:24%;background:var(--azure);opacity:.85}
+.contact .c3{width:min(300px,24vw);height:min(150px,12vw);right:3%;top:52%;border-radius:300px 300px 0 0;background:var(--sun);opacity:.9}
+.contact h2{margin:0;max-width:min(16em,56%);font:700 clamp(2.2rem,5vw,4.4rem)/1 var(--display);letter-spacing:-.03em}
+.contact .sub{margin:1.3rem 0 0;max-width:42ch;font-size:1.2rem;color:#D8E4DC}
+.mail{display:inline-block;margin-top:clamp(28px,4vw,44px);font:700 clamp(1.4rem,3.6vw,2.8rem)/1.1 var(--display);letter-spacing:-.015em;text-decoration:none;border-bottom:4px solid var(--sun);padding-bottom:5px;word-break:break-all}
+.mail:hover{color:var(--sun);border-bottom-color:var(--pink)}
+.contact-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;margin-top:clamp(36px,5vw,64px);align-items:flex-end}
 .qrs{display:flex;gap:18px}
 .qr{margin:0}
 .qr .box{width:112px;height:112px;padding:8px;background:#fff;border-radius:12px}
 .qr svg{display:block;width:100%;height:100%}
-.qr figcaption{margin-top:8px;font-size:.9rem;color:rgba(255,255,255,.9)}
-.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:clamp(48px,7vw,96px);padding-top:22px;border-top:1px solid rgba(255,255,255,.3);font-size:.95rem;color:rgba(255,255,255,.85)}
+.qr figcaption{margin-top:8px;font-size:.9rem;color:#D8E4DC}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:clamp(40px,6vw,80px);padding-top:20px;border-top:1px solid rgba(255,255,255,.25);font-size:.95rem;color:#D8E4DC}
+
+/* ---------- dialogs: CV viewer and image zoom ---------- */
+dialog{padding:0;border:1px solid var(--line);border-radius:16px;background:var(--i9);color:var(--chalk);max-width:min(1100px,94vw);width:100%}
+dialog::backdrop{background:rgba(4,6,24,.82)}
+.dlg-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.dlg-bar h2{margin:0;font:700 1.1rem/1.2 var(--display)}
+.dlg-bar .btns{gap:10px}
+.dlg-bar .btn{padding:.5em 1em;font-size:.95rem}
+.cv-pages{max-height:min(78vh,900px);overflow:auto;background:#2a2f55;padding:16px;display:flex;flex-direction:column;gap:14px;align-items:center}
+.cv-pages img{display:block;width:100%;max-width:820px;height:auto;background:#fff;border-radius:4px}
+#zoom{max-width:min(1500px,96vw);background:var(--vat)}
+#zoom img{display:block;width:100%;height:auto;max-height:84vh;object-fit:contain;background:#fff}
+#zoom .cap{padding:10px 16px;color:var(--soft);font-size:.95rem;margin:0}
+
+/* ---------- motion: plays once, never loops ---------- */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .art svg .t{opacity:0;transform:scale(.4);transform-box:fill-box;transform-origin:center;transition:opacity .5s ease,transform .6s cubic-bezier(.2,.8,.3,1.2)}
+.js .art.go svg .t{opacity:1;transform:none}
+.js .art .ink{transform:scale(0);transition:transform 1.1s cubic-bezier(.2,.8,.2,1) 1.1s}
+.js .art.go .ink{transform:none}
+.js .art .ink.y{transition-delay:.9s}.js .art .ink.b{transition-delay:1.2s}.js .art .ink.p{transition-delay:1.4s}
+.js .contact .ink{transform:scale(.3);opacity:0;transition:transform 1.2s cubic-bezier(.2,.8,.2,1),opacity 1.2s ease}
+.js .contact.in .ink{transform:none}
+.js .contact.in .c1{opacity:.8}.js .contact.in .c2{opacity:.85}.js .contact.in .c3{opacity:.9}
+.js .contact .c2{transition-delay:.2s}.js .contact .c3{transition-delay:.4s}
+.card,.skill{transition:transform .25s ease,border-color .25s ease}
+.card:hover,.skill:hover{transform:translateY(-4px);border-color:var(--pink)}
+@media (prefers-reduced-motion:reduce){
+  .js .rv,.js .art svg .t,.js .art .ink,.js .contact .ink{transition:none!important;opacity:1;transform:none}
+  .js .contact .c1{opacity:.8}.js .contact .c2{opacity:.85}.js .contact .c3{opacity:.9}
+  .card:hover,.skill:hover{transform:none}
+}
 
 /* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .skill-cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .small-cards{grid-template-columns:minmax(0,1fr)}
+}
 @media (max-width:900px){
-  .section-grid,.row-body{grid-template-columns:minmax(0,1fr)}
-  .section-grid{gap:28px}
-  .skill-cols{grid-template-columns:minmax(0,1fr)}
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .art{max-height:360px;justify-self:stretch;aspect-ratio:16/10}
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .card.wide{grid-template-columns:minmax(0,1fr)}
   .xp{grid-template-columns:minmax(0,1fr)}
-  .work-head{flex-direction:column;align-items:flex-start;gap:8px}
+  .facts{grid-template-columns:minmax(0,1fr);gap:12px}
 }
 @media (max-width:700px){
-  .nav-links a:not(.keep){display:none}
-  .hero h1{font-size:clamp(3rem,17vw,5.5rem)}
-  .hero h1 span{display:block;margin-right:0}
-  .row summary{grid-template-columns:1fr 26px}
-  .row .tags{grid-column:1;text-align:left;grid-row:2}
+  .nav-links a:not(.cvbtn){display:none}
+  .skill-cols{grid-template-columns:minmax(0,1fr)}
   .cred{grid-template-columns:minmax(0,1fr)}
   .status{grid-row:2}
   .cred p{grid-row:3}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .flow .arrow{stroke-dashoffset:0}
+  .contact .ink{opacity:.3}
+  .contact h2{max-width:100%}
 }
 </style>
 </head>
 <body>
-<a class="skip" href="#about">Skip to content</a>
+<a class="skip" href="#work">Skip to content</a>
 
-<header class="nav" id="nav">
-  <a class="wordmark" href="#top">Chioma Nwankwo</a>
+<header class="nav">
+  <a class="mono" href="#top" aria-label="Chioma Nwankwo, back to top">CN</a>
   <nav class="nav-links" aria-label="Primary">
-    <a href="#about">About</a>
-    <a class="keep" href="#work">Work</a>
+    <a href="#work">Work</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#credentials">Credentials</a>
-    <a class="keep" href="#contact">Contact</a>
+    <a href="#contact">Contact</a>
+    <button class="cvbtn" type="button" data-open-cv>View CV</button>
   </nav>
 </header>
 
 <main>
 <!-- HERO -->
-<section class="hero grain" id="top" aria-labelledby="name">
-  <div class="mesh" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i></div>
-  <canvas id="streams" aria-hidden="true"></canvas>
-
-  <div class="hero-copy" id="copy">
-    <h1 id="name"><span>Chioma</span> <span>Esther</span> <span>Nwankwo</span></h1>
-    <p class="lede">Data and AI engineer in Abuja. I build pipelines, models and the apps around them.</p>
-    <p class="cta">
-      <a class="btn btn-warm" href="mailto:chioman059@gmail.com">Email me</a>
-      <a class="btn btn-ghost" href="https://github.com/Chioma-Nwankwo" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/chioma-nwankwo-2006d/" target="_blank" rel="noopener">LinkedIn</a>
-    </p>
-  </div>
-
-  <div class="hero-gap" id="gap"></div>
-
-  <div class="stages" id="stages" aria-hidden="true">
-    <span>Raw</span><span>Cleaned</span><span>Modelled</span><span>Served</span>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section wash-a" id="about" aria-labelledby="about-t">
-  <div class="section-grid">
-    <h2 class="section-title" id="about-t">About</h2>
+<section class="hero" id="top" aria-labelledby="name">
+  <div class="hero-grid">
     <div>
-      <p class="about-lead">I'm a computer science graduate from Nile University of Nigeria, working towards becoming a cloud data and AI engineer. I like building the whole path: getting data in, cleaning it, modelling it, and putting the result in an app someone can use.</p>
-      <p class="about-more">Two internships taught me analysis, databases and shipping AI web apps. Since then I've built a natural-language data assistant, forecasting and optimisation tools, and automated trading strategies. I'm studying for the Google Cloud Professional Data Engineer certification and I'm open to remote roles worldwide.</p>
+      <ul class="chips"><li class="live">Open to work</li><li>Remote, worldwide</li><li>Abuja, Nigeria</li></ul>
+      <h1 id="name">Chioma Esther Nwankwo</h1>
+      <p class="role">Data engineer and AI engineer</p>
+      <p class="sum">Computer science graduate of Nile University of Nigeria (2026) with two internships across data science, AI applications and databases. Builds data pipelines, machine learning models and AI-powered web apps, with hands-on data analysis and dashboarding.</p>
+      <p class="seek"><b>Looking for</b>Data engineering, AI engineering and data science roles. Internships and contracts welcome.</p>
+      <p class="btns">
+        <a class="btn btn-main" href="mailto:chioman059@gmail.com">Get in touch</a>
+        <button class="btn" type="button" data-open-cv>View CV</button>
+        <a class="btn" href="https://github.com/Chioma-Nwankwo" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/chioma-nwankwo-2006d/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+    <div class="art" id="adire" role="img" aria-label="Decorative pattern inspired by adire indigo resist-dyed cloth, with overlapping pink, blue and yellow circles">
+      <i class="ink y"></i><i class="ink b"></i><i class="ink p"></i>
     </div>
   </div>
+  <dl class="facts">
+    <div><dt>Core stack</dt><dd>Python, SQL, Power BI, BigQuery</dd></div>
+    <div><dt>Studying for</dt><dd>Google Cloud Professional Data Engineer</dd></div>
+    <div><dt>Selected work</dt><dd>AI Data Assistant, GridAI, Online Retail dashboard</dd></div>
+  </dl>
 </section>
 
 <!-- WORK -->
-<section class="section wash-b" id="work" aria-labelledby="work-t">
+<section class="section on-vat" id="work" aria-labelledby="work-t">
   <div class="wrap">
-    <div class="work-head">
-      <h2 class="section-title" id="work-t">Work</h2>
-      <p>Select a project to open it.</p>
+    <h2 class="section-title" id="work-t">Work</h2>
+
+    <div class="cards">
+      <article class="card">
+        <div class="shots">
+          <button class="zoom" type="button" data-zoom="portfolio-images/data%20AI%20app.png" data-cap="AI Data Assistant: summary of a 114,545-row weather dataset and missing values filled in one column, with a cleaned CSV to download"><img src="portfolio-images/data%20AI%20app.png" width="1847" height="765" alt="AI Data Assistant summarising a 114,545-row weather dataset and filling missing values in one column, with a download button for the cleaned CSV" loading="lazy"></button>
+          <button class="zoom" type="button" data-zoom="portfolio-images/data%20AI%20app%202.png" data-cap="AI Data Assistant: answer to a question about missing values and outliers, with a bar chart"><img src="portfolio-images/data%20AI%20app%202.png" width="1852" height="1142" alt="AI Data Assistant answering a question about missing values and outliers, with a bar chart of the results" loading="lazy"></button>
+        </div>
+        <h3>AI Data Analysis Assistant</h3>
+        <p class="tags"><span class="tag">Gemini API</span><span class="tag">Python</span><span class="tag">NLP</span></p>
+        <p>Plain-language questions about an uploaded dataset return exploratory analysis. A backend pipeline handles prompt engineering, dataset preprocessing and structured insight generation, and an API-based inference workflow produces automated analytical reports.</p>
+        <p class="links">
+          <a class="link" href="https://ai-powered-data-assistant.vercel.app" target="_blank" rel="noopener">Open the live app</a>
+          <a class="link" href="https://github.com/Chioma-Nwankwo/AI_Powered_Data_assistant" target="_blank" rel="noopener">View on GitHub</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="shots">
+          <button class="zoom" type="button" data-zoom="portfolio-images/Picture3.jpg" data-cap="GridAI dashboard: regional map, 48-hour forecast comparison and battery optimisation"><img src="portfolio-images/Picture3.jpg" width="610" height="371" alt="GridAI dashboard with a regional map, 48-hour forecast comparison and battery optimisation chart" loading="lazy"></button>
+          <button class="zoom" type="button" data-zoom="portfolio-images/Picture1.jpg" data-cap="GridAI sign-in screen"><img src="portfolio-images/Picture1.jpg" width="612" height="374" alt="GridAI sign-in screen with the pitch: connect your grid, understand your energy" loading="lazy"></button>
+          <button class="zoom" type="button" data-zoom="portfolio-images/Picture2.jpg" data-cap="GridAI setup: choosing a region"><img src="portfolio-images/Picture2.jpg" width="599" height="352" alt="GridAI setup screen asking where the microgrid is located, with Nigeria, Australia, Germany and Canada as options" loading="lazy"></button>
+        </div>
+        <h3>GridAI, smart microgrid analytics</h3>
+        <p class="tags"><span class="tag">Python</span><span class="tag">Machine learning</span><span class="tag">OAuth 2.0</span></p>
+        <p>A web app for analysing and optimising smart microgrids. It covers 16 years (2008–2024) of electricity demand, renewable generation and battery storage data across Nigeria, Australia, Germany and Canada, matched to ERA5 climate data. It compares 48-hour forecasts from Random Forest, Gradient Boosting and XGBoost models, optimises battery charging with linear programming and flags anomalies with an ensemble. Sign in with Apple, Google or Microsoft protects the production app.</p>
+        <p class="links">
+          <a class="link" href="https://ai-powered-smart-microgrid-web-app.vercel.app/login" target="_blank" rel="noopener">Open the live app</a>
+          <a class="link" href="https://github.com/Chioma-Nwankwo/AI-Powered-Smart-Microgrid_Web_App/tree/Branch_2" target="_blank" rel="noopener">View on GitHub</a>
+        </p>
+      </article>
+
+      <article class="card wide">
+        <div>
+          <h3>Online Retail UK: an e-commerce story in seven chapters</h3>
+          <p class="tags"><span class="tag">Tata Data Visualisation, Forage</span><span class="tag">Power BI</span><span class="tag">530,104 rows</span></p>
+          <p>Built during the Tata Data Visualisation job simulation on Forage. A Power BI report on a UK online retailer, structured as seven chapters: overview, countries, customers, products, seasonality, demand and closing. Every page opens with the finding it supports, from 530,104 rows of transactions.</p>
+          <p>4,338 customers across 38 countries drove $10.67M in revenue. November revenue hit $1.51M, nearly three times February's $0.52M low. The Netherlands is the largest market outside the UK, at 200K units.</p>
+        </div>
+        <div class="shots">
+          <button class="zoom" type="button" data-zoom="portfolio-images/retail-overview.jpg" data-cap="Overview chapter: revenue, units sold, customers and countries served, with a revenue map"><img src="portfolio-images/retail-overview.jpg" width="1820" height="1040" alt="Overview page: 4,338 customers across 38 countries drove $10.67M in revenue, with four headline numbers and a revenue map by country" loading="lazy"></button>
+          <button class="zoom" type="button" data-zoom="portfolio-images/retail-seasonality.jpg" data-cap="Seasonality chapter: monthly revenue peaks at $1.51M in November"><img src="portfolio-images/retail-seasonality.jpg" width="1431" height="1060" alt="Seasonality page: November revenue hits $1.51M, nearly three times February's $0.52M low, shown as an area chart by month" loading="lazy"></button>
+          <button class="zoom" type="button" data-zoom="portfolio-images/retail-demand.jpg" data-cap="Demand chapter: the Netherlands is the largest non-UK market by units"><img src="portfolio-images/retail-demand.jpg" width="1790" height="1057" alt="Demand page: treemap of units sold by country, with the Netherlands largest at 200K" loading="lazy"></button>
+        </div>
+      </article>
     </div>
 
-    <div class="rows">
-      <details class="row" open>
-        <summary><h3>AI Data Analysis Assistant</h3><p class="tags">Gemini API, Python, NLP</p><span class="plus" aria-hidden="true"></span></summary>
-        <div class="row-body">
-          <div>
-            <p>Ask questions about a dataset in plain language and get exploratory analysis back. A backend pipeline handles prompt engineering, dataset preprocessing and structured insight generation, and an API-based inference workflow produces automated analytical reports.</p>
-            <p class="links">
-              <a class="link" href="https://ai-powered-data-assistant.vercel.app" target="_blank" rel="noopener">Open the live app</a>
-              <a class="link" href="https://github.com/Chioma-Nwankwo/AI_Powered_Data_assistant" target="_blank" rel="noopener">View on GitHub</a>
-            </p>
-          </div>
-          <div class="shots">
-            <img class="shot" src="portfolio-images/data%20AI%20app.png" width="1847" height="765" alt="AI Data Assistant summarising a 114,545-row weather dataset and filling missing values in one column, with a download button for the cleaned CSV" loading="lazy">
-            <img class="shot" src="portfolio-images/data%20AI%20app%202.png" width="1852" height="1142" alt="AI Data Assistant answering a question about missing values and outliers, with a bar chart of the results" loading="lazy">
-          </div>
-        </div>
-      </details>
-
-      <details class="row">
-        <summary><h3>GridAI, smart microgrid analytics</h3><p class="tags">Python, machine learning, OAuth 2.0</p><span class="plus" aria-hidden="true"></span></summary>
-        <div class="row-body">
-          <div>
-            <p>A web app for analysing and optimising smart microgrids. It covers 16 years (2008–2024) of electricity demand, renewable generation and battery storage data across Nigeria, Australia, Germany and Canada, matched to ERA5 climate data for each region.</p>
-            <p>Inside, it compares 48-hour forecasts from Random Forest, Gradient Boosting and XGBoost models, optimises battery charging with linear programming, and flags anomalies with an ensemble. It runs in English and French, and Sign in with Apple, Google or Microsoft protects the production app.</p>
-            <p class="links">
-              <a class="link" href="https://ai-powered-smart-microgrid-web-app.vercel.app/login" target="_blank" rel="noopener">Open the live app</a>
-              <a class="link" href="https://github.com/Chioma-Nwankwo/AI-Powered-Smart-Microgrid_Web_App/tree/Branch_2" target="_blank" rel="noopener">View on GitHub</a>
-            </p>
-            <svg class="flow" id="flow" viewBox="0 0 540 150" role="img" aria-label="How GridAI works: energy data from 2008 to 2024 across four countries feeds forecasting and optimisation models, which power a web app with Apple, Google and Microsoft sign-in.">
-              <defs>
-                <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB86B"/><stop offset="1" stop-color="#FF6A5C"/></linearGradient>
-                <linearGradient id="gB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4128E6"/><stop offset="1" stop-color="#D83FB8"/></linearGradient>
-              </defs>
-              <rect class="n1" x="2" y="26" width="150" height="98" rx="12"/>
-              <text class="t" x="18" y="62">Energy data</text>
-              <text class="s" x="18" y="86">2008–2024</text>
-              <text class="s" x="18" y="106">4 countries</text>
-
-              <rect class="n2" x="195" y="26" width="150" height="98" rx="12"/>
-              <text class="t" x="211" y="62">Models</text>
-              <text class="s" x="211" y="86">Forecasts and battery</text>
-              <text class="s" x="211" y="106">optimisation</text>
-
-              <rect class="n3" x="388" y="26" width="150" height="98" rx="12"/>
-              <text class="t on-dark" x="404" y="62">Web app</text>
-              <text class="s on-dark" x="404" y="86">Apple, Google and</text>
-              <text class="s on-dark" x="404" y="106">Microsoft sign-in</text>
-
-              <path class="arrow" d="M158 75H188M181 68l7 7-7 7"/>
-              <path class="arrow b" d="M351 75H381M374 68l7 7-7 7"/>
-            </svg>
-          </div>
-          <div class="shots">
-            <img class="shot" src="portfolio-images/Picture1.jpg" width="612" height="374" alt="GridAI sign-in screen with the pitch: connect your grid, understand your energy" loading="lazy">
-            <img class="shot" src="portfolio-images/Picture2.jpg" width="599" height="352" alt="GridAI setup screen asking where the microgrid is located, with Nigeria, Australia, Germany and Canada as options" loading="lazy">
-            <img class="shot" src="portfolio-images/Picture3.jpg" width="610" height="371" alt="GridAI dashboard with a regional map, 48-hour forecast comparison and battery optimisation chart" loading="lazy">
-          </div>
-        </div>
-      </details>
-
-      <details class="row">
-        <summary><h3>Sales dataset analysis</h3><p class="tags">Python, Pandas, NumPy, Power BI</p><span class="plus" aria-hidden="true"></span></summary>
-        <div class="row-body solo">
-          <div>
-            <p>Cleaning, analysis and visualisation of 113,037 sales records with Python and Power BI, turned into business insights through statistical analysis.</p>
-            <p class="links"><a class="link" href="https://github.com/Chioma-Nwankwo/Works" target="_blank" rel="noopener">View on GitHub</a></p>
-          </div>
-        </div>
-      </details>
-
-      <details class="row">
-        <summary><h3>Algorithmic trading strategy</h3><p class="tags">Pine Script, back-testing</p><span class="plus" aria-hidden="true"></span></summary>
-        <div class="row-body solo">
-          <div>
-            <p>An automated trading strategy built from technical indicators in Pine Script and back-tested on historical market data to validate its logic.</p>
-            <p class="links"><a class="link" href="https://github.com/Chioma-Nwankwo/Works" target="_blank" rel="noopener">View on GitHub</a></p>
-          </div>
-        </div>
-      </details>
-
-      <details class="row">
-        <summary><h3>Restaurant web application</h3><p class="tags">REST APIs, authentication</p><span class="plus" aria-hidden="true"></span></summary>
-        <div class="row-body solo">
-          <div>
-            <p>A full restaurant app with user authentication, menu management and order processing over REST APIs.</p>
-            <p class="links"><a class="link" href="https://github.com/Chioma-Nwankwo/Works" target="_blank" rel="noopener">View on GitHub</a></p>
-          </div>
-        </div>
-      </details>
-
-      <details class="row">
-        <summary><h3>Android apps</h3><p class="tags">Android Studio, live API data</p><span class="plus" aria-hidden="true"></span></summary>
-        <div class="row-body solo">
-          <div>
-            <p>Two native Android apps: a fully working calculator and a currency converter that pulls live exchange rates from an API.</p>
-            <p class="links">
-              <a class="link" href="https://github.com/Chioma-Nwankwo/AndriodSample1" target="_blank" rel="noopener">Currency converter on GitHub</a>
-              <a class="link" href="https://github.com/Chioma-Nwankwo/Calculator" target="_blank" rel="noopener">Calculator on GitHub</a>
-            </p>
-          </div>
-        </div>
-      </details>
+    <div class="small-cards">
+      <article class="card">
+        <h3>Algorithmic trading strategy</h3>
+        <p class="tags"><span class="tag">Pine Script</span><span class="tag">Back-testing</span></p>
+        <p>An automated trading strategy built from technical indicators in Pine Script and back-tested on historical market data to validate its logic.</p>
+        <p class="links"><a class="link" href="https://github.com/Chioma-Nwankwo/Works" target="_blank" rel="noopener">View on GitHub</a></p>
+      </article>
+      <article class="card">
+        <h3>Restaurant web application</h3>
+        <p class="tags"><span class="tag">REST APIs</span><span class="tag">Authentication</span></p>
+        <p>A full restaurant app with user authentication, menu management and order processing over REST APIs.</p>
+        <p class="links"><a class="link" href="https://github.com/Chioma-Nwankwo/Works" target="_blank" rel="noopener">View on GitHub</a></p>
+      </article>
+      <article class="card">
+        <h3>Android apps</h3>
+        <p class="tags"><span class="tag">Android Studio</span><span class="tag">Live API data</span></p>
+        <p>Two native Android apps: a fully working calculator and a currency converter that pulls live exchange rates from an API.</p>
+        <p class="links">
+          <a class="link" href="https://github.com/Chioma-Nwankwo/AndriodSample1" target="_blank" rel="noopener">Currency converter</a>
+          <a class="link" href="https://github.com/Chioma-Nwankwo/Calculator" target="_blank" rel="noopener">Calculator</a>
+        </p>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="section wash-a" id="experience" aria-labelledby="exp-t">
-  <div class="section-grid">
+<section class="section on-indigo" id="experience" aria-labelledby="exp-t">
+  <div class="wrap">
     <h2 class="section-title" id="exp-t">Experience</h2>
-    <div>
-      <div class="xp">
-        <time>Jul – Sep 2025</time>
-        <div>
-          <h3>Data Science and AI Intern</h3>
-          <p class="org">MRT Net Solutions Ltd</p>
-          <ul>
-            <li>Ran exploratory analysis on a 114,547-row weather dataset and found anomalous patterns in 2012 using rolling-mean trends in Python.</li>
-            <li>Built and deployed an AI data-analysis web app with the OpenAI API, Google OAuth 2.0 and a conversational upload interface.</li>
-            <li>Designed two interactive assessment pages in Odoo for a Strategic Planning GPT product, including a gauge-based results page with personalised recommendations.</li>
-          </ul>
-        </div>
+    <div class="xp">
+      <time>Jul – Sep 2025</time>
+      <div>
+        <h3>Data Science and AI Intern</h3>
+        <p class="org">MRT Net Solutions Ltd</p>
+        <ul>
+          <li>Ran exploratory analysis on a 114,547-row weather dataset and found anomalous patterns in 2012 using rolling-mean trends in Python.</li>
+          <li>Built and deployed an AI data-analysis web app with the OpenAI API, Google OAuth 2.0 and a conversational upload interface.</li>
+          <li>Designed two interactive assessment pages in Odoo for a Strategic Planning GPT product, including a gauge-based results page with personalised recommendations.</li>
+        </ul>
       </div>
-      <div class="xp">
-        <time>Jul – Sep 2024</time>
-        <div>
-          <h3>IT and Database Intern</h3>
-          <p class="org">Fiscal Responsibility Commission</p>
-          <ul>
-            <li>Built a MySQL database for tracking internal mail across departments, with the queries to enter, find and update records, in one week.</li>
-            <li>Maintained the commission's web portal in PHP and Python, with weekly backups and SEO improvements.</li>
-            <li>Segmented the new building's Wi-Fi by department to clear network congestion.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="edu"><strong>BSc Computer Science</strong>, Nile University of Nigeria, June 2026.</p>
     </div>
+    <div class="xp">
+      <time>Jul – Sep 2024</time>
+      <div>
+        <h3>IT and Database Intern</h3>
+        <p class="org">Fiscal Responsibility Commission</p>
+        <ul>
+          <li>Built a MySQL database for tracking internal mail across departments, with the queries to enter, find and update records, in one week.</li>
+          <li>Maintained the commission's web portal in PHP and Python, with weekly backups and SEO improvements.</li>
+          <li>Segmented the new building's Wi-Fi by department to clear network congestion.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="edu"><strong>BSc Computer Science</strong>, Nile University of Nigeria, June 2026.</p>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section class="section wash-b" id="skills" aria-labelledby="skills-t">
-  <div class="section-grid">
+<section class="section on-green" id="skills" aria-labelledby="skills-t">
+  <div class="wrap">
     <h2 class="section-title" id="skills-t">Skills</h2>
     <div class="skill-cols">
-      <div class="skill s1">
-        <h3>Data and cloud</h3>
-        <ul>
-          <li>Python, SQL, R</li>
-          <li>Pandas, NumPy</li>
-          <li>ETL pipelines</li>
-          <li>BigQuery</li>
-          <li>Google Cloud Storage</li>
-          <li>Apache Iceberg</li>
-        </ul>
+      <div class="skill">
+        <h3>Data engineering and cloud</h3>
+        <ul><li>Python, SQL, R</li><li>ETL pipelines</li><li>BigQuery</li><li>Google Cloud Storage</li><li>Apache Iceberg</li><li>MySQL</li></ul>
       </div>
-      <div class="skill s2">
+      <div class="skill k2">
+        <h3>Analytics and visualisation</h3>
+        <ul><li>Power BI</li><li>Pandas, NumPy</li><li>Matplotlib</li><li>Exploratory data analysis</li><li>Statistical analysis</li></ul>
+      </div>
+      <div class="skill k3">
         <h3>AI and machine learning</h3>
-        <ul>
-          <li>Scikit-learn</li>
-          <li>OpenAI and Gemini APIs</li>
-          <li>Vertex AI</li>
-          <li>Jupyter</li>
-          <li>Prompt engineering</li>
-        </ul>
+        <ul><li>Scikit-learn</li><li>OpenAI and Gemini APIs</li><li>Vertex AI</li><li>Prompt engineering</li><li>Jupyter</li></ul>
       </div>
-      <div class="skill s3">
+      <div class="skill k4">
         <h3>Building and shipping</h3>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>REST APIs, OAuth 2.0</li>
-          <li>Git, VS Code</li>
-          <li>Java, C++, Prolog</li>
-          <li>Power BI</li>
-          <li>Android Studio</li>
-        </ul>
+        <ul><li>HTML, CSS, JavaScript</li><li>REST APIs, OAuth 2.0</li><li>Git, VS Code</li><li>Java, C++, Prolog</li><li>Android Studio</li></ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CREDENTIALS -->
-<section class="section wash-a" id="credentials" aria-labelledby="cred-t">
-  <div class="section-grid">
+<section class="section on-vat" id="credentials" aria-labelledby="cred-t">
+  <div class="wrap">
     <h2 class="section-title" id="cred-t">Credentials</h2>
-    <div>
-      <div class="cred">
-        <h3>Google Cloud Professional Data Engineer</h3>
-        <span class="status wip"><i></i>In progress</span>
-        <p>Data pipelines, BigQuery, data modelling, ETL workflows and cloud storage, with hands-on projects on Google Cloud.</p>
-      </div>
-      <div class="cred">
-        <h3>IBM Data Science on Coursera</h3>
-        <span class="status"><i></i>6 course certificates</span>
-        <p>What is Data Science, Tools for Data Science, Data Science Methodology, Python for Data Science, AI and Development, Python Project for Data Science, and Databases and SQL for Data Science with Python.</p>
-      </div>
-      <div class="cred">
-        <h3>British Airways Data Science, Forage job simulation</h3>
-        <span class="status"><i></i>Completed</span>
-        <p>Scraped and analysed customer reviews, then built a predictive model of what influences buying behaviour.</p>
-      </div>
-      <div class="cred">
-        <h3>Tata Data Visualisation, Forage job simulation</h3>
-        <span class="status"><i></i>Completed</span>
-        <p>Built visualisations for Tata Consultancy Services and prepared questions for a client leadership meeting.</p>
-      </div>
-      <div class="cred">
-        <h3>Apple Developer Program</h3>
-        <span class="status"><i></i>Active</span>
-        <p>Sign in with Apple and OAuth 2.0 in production apps, with App Store Connect and TestFlight access.</p>
-      </div>
+    <div class="cred">
+      <h3>Google Cloud Professional Data Engineer</h3>
+      <span class="status wip"><i></i>In progress</span>
+      <p>Data pipelines, BigQuery, data modelling, ETL workflows and cloud storage, with hands-on projects on Google Cloud.</p>
+    </div>
+    <div class="cred">
+      <h3>IBM Data Science on Coursera</h3>
+      <span class="status"><i></i>6 course certificates</span>
+      <p>What is Data Science, Tools for Data Science, Data Science Methodology, Python for Data Science, AI and Development, Python Project for Data Science, and Databases and SQL for Data Science with Python.</p>
+    </div>
+    <div class="cred">
+      <h3>British Airways Data Science, Forage job simulation</h3>
+      <span class="status"><i></i>Completed</span>
+      <p>Scraped and analysed customer reviews, then built a predictive model of what influences buying behaviour.</p>
+    </div>
+    <div class="cred">
+      <h3>Tata Data Visualisation, Forage job simulation</h3>
+      <span class="status"><i></i>Completed</span>
+      <p>Built visualisations for Tata Consultancy Services and prepared questions for a client leadership meeting. The Online Retail UK report in Work came out of this simulation.</p>
+    </div>
+    <div class="cred">
+      <h3>Apple Developer Program</h3>
+      <span class="status on"><i></i>Active</span>
+      <p>Sign in with Apple and OAuth 2.0 in production apps, with App Store Connect and TestFlight access.</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact grain" id="contact" aria-labelledby="contact-t">
-  <div class="mesh" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i></div>
+<section class="contact" id="contact" aria-labelledby="contact-t">
+  <i class="ink c1" aria-hidden="true"></i><i class="ink c2" aria-hidden="true"></i><i class="ink c3" aria-hidden="true"></i>
   <div class="wrap">
     <h2 id="contact-t">Looking for data engineering, AI engineering and data science roles.</h2>
     <p class="sub">Remote, worldwide. Internships and contract work are welcome.</p>
     <a class="mail" href="mailto:chioman059@gmail.com">chioman059@gmail.com</a>
 
     <div class="contact-row">
-      <div class="contact-links">
-        <a class="btn btn-ghost" href="https://github.com/Chioma-Nwankwo" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/chioma-nwankwo-2006d/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+      <p class="btns">
+        <button class="btn" type="button" data-open-cv>View CV</button>
+        <a class="btn" href="https://github.com/Chioma-Nwankwo" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/chioma-nwankwo-2006d/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
       <div class="qrs">
         <figure class="qr"><div class="box" role="img" aria-label="QR code for Chioma's LinkedIn profile"><svg width="100%" height="100%" version="1.1" viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg"><path d="M2,2H3V3H2zM3,2H4V3H3zM4,2H5V3H4zM5,2H6V3H5zM6,2H7V3H6zM7,2H8V3H7zM8,2H9V3H8zM10,2H11V3H10zM11,2H12V3H11zM12,2H13V3H12zM14,2H15V3H14zM18,2H19V3H18zM20,2H21V3H20zM21,2H22V3H21zM22,2H23V3H22zM23,2H24V3H23zM25,2H26V3H25zM28,2H29V3H28zM29,2H30V3H29zM30,2H31V3H30zM31,2H32V3H31zM32,2H33V3H32zM33,2H34V3H33zM34,2H35V3H34zM2,3H3V4H2zM8,3H9V4H8zM10,3H11V4H10zM11,3H12V4H11zM12,3H13V4H12zM16,3H17V4H16zM18,3H19V4H18zM19,3H20V4H19zM22,3H23V4H22zM25,3H26V4H25zM28,3H29V4H28zM34,3H35V4H34zM2,4H3V5H2zM4,4H5V5H4zM5,4H6V5H5zM6,4H7V5H6zM8,4H9V5H8zM11,4H12V5H11zM13,4H14V5H13zM14,4H15V5H14zM15,4H16V5H15zM16,4H17V5H16zM17,4H18V5H17zM18,4H19V5H18zM20,4H21V5H20zM22,4H23V5H22zM24,4H25V5H24zM26,4H27V5H26zM28,4H29V5H28zM30,4H31V5H30zM31,4H32V5H31zM32,4H33V5H32zM34,4H35V5H34zM2,5H3V6H2zM4,5H5V6H4zM5,5H6V6H5zM6,5H7V6H6zM8,5H9V6H8zM10,5H11V6H10zM13,5H14V6H13zM17,5H18V6H17zM20,5H21V6H20zM21,5H22V6H21zM25,5H26V6H25zM28,5H29V6H28zM30,5H31V6H30zM31,5H32V6H31zM32,5H33V6H32zM34,5H35V6H34zM2,6H3V7H2zM4,6H5V7H4zM5,6H6V7H5zM6,6H7V7H6zM8,6H9V7H8zM11,6H12V7H11zM13,6H14V7H13zM15,6H16V7H15zM18,6H19V7H18zM19,6H20V7H19zM20,6H21V7H20zM23,6H24V7H23zM24,6H25V7H24zM28,6H29V7H28zM30,6H31V7H30zM31,6H32V7H31zM32,6H33V7H32zM34,6H35V7H34zM2,7H3V8H2zM8,7H9V8H8zM11,7H12V8H11zM13,7H14V8H13zM14,7H15V8H14zM15,7H16V8H15zM17,7H18V8H17zM18,7H19V8H18zM19,7H20V8H19zM24,7H25V8H24zM28,7H29V8H28zM34,7H35V8H34zM2,8H3V9H2zM3,8H4V9H3zM4,8H5V9H4zM5,8H6V9H5zM6,8H7V9H6zM7,8H8V9H7zM8,8H9V9H8zM10,8H11V9H10zM12,8H13V9H12zM14,8H15V9H14zM16,8H17V9H16zM18,8H19V9H18zM20,8H21V9H20zM22,8H23V9H22zM24,8H25V9H24zM26,8H27V9H26zM28,8H29V9H28zM29,8H30V9H29zM30,8H31V9H30zM31,8H32V9H31zM32,8H33V9H32zM33,8H34V9H33zM34,8H35V9H34zM10,9H11V10H10zM14,9H15V10H14zM16,9H17V10H16zM17,9H18V10H17zM18,9H19V10H18zM19,9H20V10H19zM20,9H21V10H20zM21,9H22V10H21zM24,9H25V10H24zM2,10H3V11H2zM4,10H5V11H4zM5,10H6V11H5zM7,10H8V11H7zM8,10H9V11H8zM9,10H10V11H9zM13,10H14V11H13zM14,10H15V11H14zM16,10H17V11H16zM17,10H18V11H17zM18,10H19V11H18zM19,10H20V11H19zM20,10H21V11H20zM23,10H24V11H23zM28,10H29V11H28zM31,10H32V11H31zM33,10H34V11H33zM34,10H35V11H34zM2,11H3V12H2zM3,11H4V12H3zM4,11H5V12H4zM5,11H6V12H5zM6,11H7V12H6zM7,11H8V12H7zM10,11H11V12H10zM12,11H13V12H12zM13,11H14V12H13zM14,11H15V12H14zM15,11H16V12H15zM18,11H19V12H18zM19,11H20V12H19zM20,11H21V12H20zM21,11H22V12H21zM23,11H24V12H23zM25,11H26V12H25zM28,11H29V12H28zM29,11H30V12H29zM31,11H32V12H31zM32,11H33V12H32zM34,11H35V12H34zM2,12H3V13H2zM4,12H5V13H4zM6,12H7V13H6zM8,12H9V13H8zM10,12H11V13H10zM12,12H13V13H12zM14,12H15V13H14zM15,12H16V13H15zM18,12H19V13H18zM20,12H21V13H20zM22,12H23V13H22zM25,12H26V13H25zM27,12H28V13H27zM29,12H30V13H29zM30,12H31V13H30zM31,12H32V13H31zM33,12H34V13H33zM34,12H35V13H34zM4,13H5V14H4zM5,13H6V14H5zM10,13H11V14H10zM11,13H12V14H11zM13,13H14V14H13zM17,13H18V14H17zM19,13H20V14H19zM22,13H23V14H22zM24,13H25V14H24zM25,13H26V14H25zM26,13H27V14H26zM27,13H28V14H27zM28,13H29V14H28zM29,13H30V14H29zM31,13H32V14H31zM2,14H3V15H2zM4,14H5V15H4zM8,14H9V15H8zM10,14H11V15H10zM11,14H12V15H11zM16,14H17V15H16zM18,14H19V15H18zM21,14H22V15H21zM22,14H23V15H22zM25,14H26V15H25zM27,14H28V15H27zM29,14H30V15H29zM30,14H31V15H30zM31,14H32V15H31zM33,14H34V15H33zM34,14H35V15H34zM4,15H5V16H4zM7,15H8V16H7zM10,15H11V16H10zM11,15H12V16H11zM12,15H13V16H12zM13,15H14V16H13zM15,15H16V16H15zM16,15H17V16H16zM22,15H23V16H22zM23,15H24V16H23zM24,15H25V16H24zM29,15H30V16H29zM31,15H32V16H31zM33,15H34V16H33zM2,16H3V17H2zM5,16H6V17H5zM6,16H7V17H6zM7,16H8V17H7zM8,16H9V17H8zM11,16H12V17H11zM16,16H17V17H16zM19,16H20V17H19zM20,16H21V17H20zM21,16H22V17H21zM22,16H23V17H22zM23,16H24V17H23zM26,16H27V17H26zM28,16H29V17H28zM29,16H30V17H29zM30,16H31V17H30zM31,16H32V17H31zM2,17H3V18H2zM3,17H4V18H3zM5,17H6V18H5zM6,17H7V18H6zM7,17H8V18H7zM9,17H10V18H9zM10,17H11V18H10zM11,17H12V18H11zM12,17H13V18H12zM14,17H15V18H14zM17,17H18V18H17zM23,17H24V18H23zM27,17H28V18H27zM28,17H29V18H28zM29,17H30V18H29zM32,17H33V18H32zM2,18H3V19H2zM3,18H4V19H3zM7,18H8V19H7zM8,18H9V19H8zM10,18H11V19H10zM11,18H12V19H11zM20,18H21V19H20zM22,18H23V19H22zM23,18H24V19H23zM24,18H25V19H24zM27,18H28V19H27zM28,18H29V19H28zM30,18H31V19H30zM31,18H32V19H31zM32,18H33V19H32zM4,19H5V20H4zM5,19H6V20H5zM6,19H7V20H6zM7,19H8V20H7zM11,19H12V20H11zM12,19H13V20H12zM17,19H18V20H17zM18,19H19V20H18zM22,19H23V20H22zM24,19H25V20H24zM25,19H26V20H25zM28,19H29V20H28zM30,19H31V20H30zM31,19H32V20H31zM33,19H34V20H33zM34,19H35V20H34zM3,20H4V21H3zM5,20H6V21H5zM7,20H8V21H7zM8,20H9V21H8zM10,20H11V21H10zM13,20H14V21H13zM17,20H18V21H17zM20,20H21V21H20zM22,20H23V21H22zM24,20H25V21H24zM28,20H29V21H28zM29,20H30V21H29zM30,20H31V21H30zM32,20H33V21H32zM33,20H34V21H33zM4,21H5V22H4zM6,21H7V22H6zM7,21H8V22H7zM9,21H10V22H9zM10,21H11V22H10zM13,21H14V22H13zM16,21H17V22H16zM17,21H18V22H17zM18,21H19V22H18zM19,21H20V22H19zM20,21H21V22H20zM22,21H23V22H22zM26,21H27V22H26zM27,21H28V22H27zM30,21H31V22H30zM33,21H34V22H33zM2,22H3V23H2zM8,22H9V23H8zM9,22H10V23H9zM10,22H11V23H10zM11,22H12V23H11zM12,22H13V23H12zM15,22H16V23H15zM17,22H18V23H17zM18,22H19V23H18zM23,22H24V23H23zM31,22H32V23H31zM32,22H33V23H32zM34,22H35V23H34zM2,23H3V24H2zM4,23H5V24H4zM6,23H7V24H6zM7,23H8V24H7zM9,23H10V24H9zM14,23H15V24H14zM16,23H17V24H16zM17,23H18V24H17zM18,23H19V24H18zM19,23H20V24H19zM22,23H23V24H22zM25,23H26V24H25zM26,23H27V24H26zM27,23H28V24H27zM28,23H29V24H28zM31,23H32V24H31zM34,23H35V24H34zM5,24H6V25H5zM6,24H7V25H6zM8,24H9V25H8zM11,24H12V25H11zM13,24H14V25H13zM15,24H16V25H15zM17,24H18V25H17zM19,24H20V25H19zM20,24H21V25H20zM21,24H22V25H21zM22,24H23V25H22zM23,24H24V25H23zM25,24H26V25H25zM26,24H27V25H26zM27,24H28V25H27zM28,24H29V25H28zM29,24H30V25H29zM30,24H31V25H30zM33,24H34V25H33zM34,24H35V25H34zM3,25H4V26H3zM4,25H5V26H4zM7,25H8V26H7zM10,25H11V26H10zM11,25H12V26H11zM13,25H14V26H13zM14,25H15V26H14zM15,25H16V26H15zM17,25H18V26H17zM20,25H21V26H20zM22,25H23V26H22zM25,25H26V26H25zM26,25H27V26H26zM28,25H29V26H28zM29,25H30V26H29zM30,25H31V26H30zM31,25H32V26H31zM2,26H3V27H2zM4,26H5V27H4zM5,26H6V27H5zM7,26H8V27H7zM8,26H9V27H8zM10,26H11V27H10zM11,26H12V27H11zM12,26H13V27H12zM15,26H16V27H15zM19,26H20V27H19zM20,26H21V27H20zM21,26H22V27H21zM24,26H25V27H24zM25,26H26V27H25zM26,26H27V27H26zM27,26H28V27H27zM28,26H29V27H28zM29,26H30V27H29zM30,26H31V27H30zM10,27H11V28H10zM14,27H15V28H14zM16,27H17V28H16zM17,27H18V28H17zM18,27H19V28H18zM21,27H22V28H21zM26,27H27V28H26zM30,27H31V28H30zM31,27H32V28H31zM2,28H3V29H2zM3,28H4V29H3zM4,28H5V29H4zM5,28H6V29H5zM6,28H7V29H6zM7,28H8V29H7zM8,28H9V29H8zM10,28H11V29H10zM12,28H13V29H12zM14,28H15V29H14zM19,28H20V29H19zM20,28H21V29H20zM21,28H22V29H21zM25,28H26V29H25zM26,28H27V29H26zM28,28H29V29H28zM30,28H31V29H30zM2,29H3V30H2zM8,29H9V30H8zM10,29H11V30H10zM11,29H12V30H11zM12,29H13V30H12zM15,29H16V30H15zM16,29H17V30H16zM17,29H18V30H17zM19,29H20V30H19zM20,29H21V30H20zM22,29H23V30H22zM23,29H24V30H23zM25,29H26V30H25zM26,29H27V30H26zM30,29H31V30H30zM31,29H32V30H31zM32,29H33V30H32zM33,29H34V30H33zM2,30H3V31H2zM4,30H5V31H4zM5,30H6V31H5zM6,30H7V31H6zM8,30H9V31H8zM11,30H12V31H11zM12,30H13V31H12zM14,30H15V31H14zM16,30H17V31H16zM17,30H18V31H17zM18,30H19V31H18zM19,30H20V31H19zM20,30H21V31H20zM22,30H23V31H22zM23,30H24V31H23zM25,30H26V31H25zM26,30H27V31H26zM27,30H28V31H27zM28,30H29V31H28zM29,30H30V31H29zM30,30H31V31H30zM32,30H33V31H32zM2,31H3V32H2zM4,31H5V32H4zM5,31H6V32H5zM6,31H7V32H6zM8,31H9V32H8zM10,31H11V32H10zM11,31H12V32H11zM12,31H13V32H12zM13,31H14V32H13zM14,31H15V32H14zM15,31H16V32H15zM16,31H17V32H16zM18,31H19V32H18zM19,31H20V32H19zM21,31H22V32H21zM24,31H25V32H24zM25,31H26V32H25zM26,31H27V32H26zM29,31H30V32H29zM31,31H32V32H31zM32,31H33V32H32zM34,31H35V32H34zM2,32H3V33H2zM4,32H5V33H4zM5,32H6V33H5zM6,32H7V33H6zM8,32H9V33H8zM10,32H11V33H10zM12,32H13V33H12zM13,32H14V33H13zM15,32H16V33H15zM17,32H18V33H17zM18,32H19V33H18zM19,32H20V33H19zM22,32H23V33H22zM23,32H24V33H23zM24,32H25V33H24zM25,32H26V33H25zM26,32H27V33H26zM27,32H28V33H27zM28,32H29V33H28zM29,32H30V33H29zM2,33H3V34H2zM8,33H9V34H8zM13,33H14V34H13zM19,33H20V34H19zM20,33H21V34H20zM21,33H22V34H21zM24,33H25V34H24zM25,33H26V34H25zM26,33H27V34H26zM27,33H28V34H27zM28,33H29V34H28zM29,33H30V34H29zM30,33H31V34H30zM34,33H35V34H34zM2,34H3V35H2zM3,34H4V35H3zM4,34H5V35H4zM5,34H6V35H5zM6,34H7V35H6zM7,34H8V35H7zM8,34H9V35H8zM10,34H11V35H10zM11,34H12V35H11zM13,34H14V35H13zM16,34H17V35H16zM18,34H19V35H18zM19,34H20V35H19zM20,34H21V35H20zM23,34H24V35H23zM25,34H26V35H25zM28,34H29V35H28zM30,34H31V35H30zM31,34H32V35H31zM32,34H33V35H32z" id="qr-path" fill="#000000" fill-opacity="1" fill-rule="nonzero" stroke="none"/></svg></div><figcaption>LinkedIn</figcaption></figure>
         <figure class="qr"><div class="box" role="img" aria-label="QR code for this portfolio"><svg width="100%" height="100%" version="1.1" viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg"><path d="M2,2H3V3H2zM3,2H4V3H3zM4,2H5V3H4zM5,2H6V3H5zM6,2H7V3H6zM7,2H8V3H7zM8,2H9V3H8zM10,2H11V3H10zM15,2H16V3H15zM16,2H17V3H16zM17,2H18V3H17zM20,2H21V3H20zM25,2H26V3H25zM28,2H29V3H28zM29,2H30V3H29zM30,2H31V3H30zM31,2H32V3H31zM32,2H33V3H32zM33,2H34V3H33zM34,2H35V3H34zM2,3H3V4H2zM8,3H9V4H8zM15,3H16V4H15zM16,3H17V4H16zM20,3H21V4H20zM21,3H22V4H21zM28,3H29V4H28zM34,3H35V4H34zM2,4H3V5H2zM4,4H5V5H4zM5,4H6V5H5zM6,4H7V5H6zM8,4H9V5H8zM12,4H13V5H12zM14,4H15V5H14zM16,4H17V5H16zM18,4H19V5H18zM19,4H20V5H19zM20,4H21V5H20zM21,4H22V5H21zM22,4H23V5H22zM23,4H24V5H23zM25,4H26V5H25zM26,4H27V5H26zM28,4H29V5H28zM30,4H31V5H30zM31,4H32V5H31zM32,4H33V5H32zM34,4H35V5H34zM2,5H3V6H2zM4,5H5V6H4zM5,5H6V6H5zM6,5H7V6H6zM8,5H9V6H8zM10,5H11V6H10zM12,5H13V6H12zM13,5H14V6H13zM17,5H18V6H17zM18,5H19V6H18zM19,5H20V6H19zM23,5H24V6H23zM24,5H25V6H24zM28,5H29V6H28zM30,5H31V6H30zM31,5H32V6H31zM32,5H33V6H32zM34,5H35V6H34zM2,6H3V7H2zM4,6H5V7H4zM5,6H6V7H5zM6,6H7V7H6zM8,6H9V7H8zM10,6H11V7H10zM18,6H19V7H18zM19,6H20V7H19zM21,6H22V7H21zM24,6H25V7H24zM28,6H29V7H28zM30,6H31V7H30zM31,6H32V7H31zM32,6H33V7H32zM34,6H35V7H34zM2,7H3V8H2zM8,7H9V8H8zM10,7H11V8H10zM13,7H14V8H13zM17,7H18V8H17zM19,7H20V8H19zM22,7H23V8H22zM25,7H26V8H25zM26,7H27V8H26zM28,7H29V8H28zM34,7H35V8H34zM2,8H3V9H2zM3,8H4V9H3zM4,8H5V9H4zM5,8H6V9H5zM6,8H7V9H6zM7,8H8V9H7zM8,8H9V9H8zM10,8H11V9H10zM12,8H13V9H12zM14,8H15V9H14zM16,8H17V9H16zM18,8H19V9H18zM20,8H21V9H20zM22,8H23V9H22zM24,8H25V9H24zM26,8H27V9H26zM28,8H29V9H28zM29,8H30V9H29zM30,8H31V9H30zM31,8H32V9H31zM32,8H33V9H32zM33,8H34V9H33zM34,8H35V9H34zM10,9H11V10H10zM11,9H12V10H11zM12,9H13V10H12zM13,9H14V10H13zM19,9H20V10H19zM20,9H21V10H20zM21,9H22V10H21zM22,9H23V10H22zM23,9H24V10H23zM26,9H27V10H26zM2,10H3V11H2zM6,10H7V11H6zM8,10H9V11H8zM9,10H10V11H9zM10,10H11V11H10zM14,10H15V11H14zM17,10H18V11H17zM19,10H20V11H19zM20,10H21V11H20zM23,10H24V11H23zM25,10H26V11H25zM26,10H27V11H26zM27,10H28V11H27zM28,10H29V11H28zM29,10H30V11H29zM30,10H31V11H30zM31,10H32V11H31zM34,10H35V11H34zM2,11H3V12H2zM3,11H4V12H3zM4,11H5V12H4zM7,11H8V12H7zM11,11H12V12H11zM13,11H14V12H13zM14,11H15V12H14zM16,11H17V12H16zM17,11H18V12H17zM18,11H19V12H18zM19,11H20V12H19zM20,11H21V12H20zM23,11H24V12H23zM25,11H26V12H25zM27,11H28V12H27zM31,11H32V12H31zM32,11H33V12H32zM34,11H35V12H34zM5,12H6V13H5zM6,12H7V13H6zM8,12H9V13H8zM10,12H11V13H10zM11,12H12V13H11zM12,12H13V13H12zM15,12H16V13H15zM16,12H17V13H16zM17,12H18V13H17zM20,12H21V13H20zM22,12H23V13H22zM25,12H26V13H25zM26,12H27V13H26zM27,12H28V13H27zM28,12H29V13H28zM31,12H32V13H31zM33,12H34V13H33zM3,13H4V14H3zM6,13H7V14H6zM7,13H8V14H7zM9,13H10V14H9zM10,13H11V14H10zM11,13H12V14H11zM12,13H13V14H12zM13,13H14V14H13zM15,13H16V14H15zM17,13H18V14H17zM21,13H22V14H21zM24,13H25V14H24zM26,13H27V14H26zM27,13H28V14H27zM28,13H29V14H28zM33,13H34V14H33zM34,13H35V14H34zM3,14H4V15H3zM5,14H6V15H5zM7,14H8V15H7zM8,14H9V15H8zM10,14H11V15H10zM15,14H16V15H15zM18,14H19V15H18zM24,14H25V15H24zM25,14H26V15H25zM26,14H27V15H26zM28,14H29V15H28zM30,14H31V15H30zM31,14H32V15H31zM3,15H4V16H3zM6,15H7V16H6zM10,15H11V16H10zM16,15H17V16H16zM19,15H20V16H19zM20,15H21V16H20zM21,15H22V16H21zM22,15H23V16H22zM23,15H24V16H23zM26,15H27V16H26zM27,15H28V16H27zM29,15H30V16H29zM32,15H33V16H32zM2,16H3V17H2zM3,16H4V17H3zM5,16H6V17H5zM6,16H7V17H6zM7,16H8V17H7zM8,16H9V17H8zM9,16H10V17H9zM10,16H11V17H10zM11,16H12V17H11zM12,16H13V17H12zM13,16H14V17H13zM14,16H15V17H14zM17,16H18V17H17zM20,16H21V17H20zM22,16H23V17H22zM23,16H24V17H23zM25,16H26V17H25zM26,16H27V17H26zM27,16H28V17H27zM28,16H29V17H28zM29,16H30V17H29zM31,16H32V17H31zM33,16H34V17H33zM2,17H3V18H2zM3,17H4V18H3zM4,17H5V18H4zM6,17H7V18H6zM7,17H8V18H7zM9,17H10V18H9zM10,17H11V18H10zM12,17H13V18H12zM13,17H14V18H13zM14,17H15V18H14zM16,17H17V18H16zM17,17H18V18H17zM18,17H19V18H18zM19,17H20V18H19zM23,17H24V18H23zM26,17H27V18H26zM27,17H28V18H27zM28,17H29V18H28zM30,17H31V18H30zM2,18H3V19H2zM4,18H5V19H4zM5,18H6V19H5zM6,18H7V19H6zM8,18H9V19H8zM9,18H10V19H9zM11,18H12V19H11zM13,18H14V19H13zM16,18H17V19H16zM18,18H19V19H18zM19,18H20V19H19zM21,18H22V19H21zM22,18H23V19H22zM23,18H24V19H23zM24,18H25V19H24zM25,18H26V19H25zM26,18H27V19H26zM28,18H29V19H28zM30,18H31V19H30zM33,18H34V19H33zM3,19H4V20H3zM4,19H5V20H4zM5,19H6V20H5zM6,19H7V20H6zM9,19H10V20H9zM10,19H11V20H10zM13,19H14V20H13zM17,19H18V20H17zM18,19H19V20H18zM20,19H21V20H20zM25,19H26V20H25zM27,19H28V20H27zM31,19H32V20H31zM32,19H33V20H32zM33,19H34V20H33zM2,20H3V21H2zM3,20H4V21H3zM4,20H5V21H4zM8,20H9V21H8zM9,20H10V21H9zM11,20H12V21H11zM12,20H13V21H12zM13,20H14V21H13zM15,20H16V21H15zM17,20H18V21H17zM18,20H19V21H18zM19,20H20V21H19zM23,20H24V21H23zM24,20H25V21H24zM25,20H26V21H25zM26,20H27V21H26zM27,20H28V21H27zM28,20H29V21H28zM29,20H30V21H29zM31,20H32V21H31zM7,21H8V22H7zM12,21H13V22H12zM14,21H15V22H14zM15,21H16V22H15zM16,21H17V22H16zM17,21H18V22H17zM18,21H19V22H18zM19,21H20V22H19zM20,21H21V22H20zM21,21H22V22H21zM22,21H23V22H22zM23,21H24V22H23zM25,21H26V22H25zM29,21H30V22H29zM33,21H34V22H33zM34,21H35V22H34zM3,22H4V23H3zM4,22H5V23H4zM7,22H8V23H7zM8,22H9V23H8zM11,22H12V23H11zM12,22H13V23H12zM16,22H17V23H16zM17,22H18V23H17zM20,22H21V23H20zM22,22H23V23H22zM25,22H26V23H25zM26,22H27V23H26zM28,22H29V23H28zM30,22H31V23H30zM31,22H32V23H31zM2,23H3V24H2zM3,23H4V24H3zM4,23H5V24H4zM6,23H7V24H6zM9,23H10V24H9zM10,23H11V24H10zM12,23H13V24H12zM13,23H14V24H13zM16,23H17V24H16zM18,23H19V24H18zM21,23H22V24H21zM23,23H24V24H23zM24,23H25V24H24zM25,23H26V24H25zM26,23H27V24H26zM27,23H28V24H27zM29,23H30V24H29zM31,23H32V24H31zM33,23H34V24H33zM4,24H5V25H4zM8,24H9V25H8zM9,24H10V25H9zM12,24H13V25H12zM13,24H14V25H13zM18,24H19V25H18zM20,24H21V25H20zM21,24H22V25H21zM25,24H26V25H25zM26,24H27V25H26zM29,24H30V25H29zM30,24H31V25H30zM32,24H33V25H32zM33,24H34V25H33zM4,25H5V26H4zM5,25H6V26H5zM6,25H7V26H6zM15,25H16V26H15zM16,25H17V26H16zM19,25H20V26H19zM20,25H21V26H20zM21,25H22V26H21zM22,25H23V26H22zM23,25H24V26H23zM24,25H25V26H24zM26,25H27V26H26zM27,25H28V26H27zM28,25H29V26H28zM30,25H31V26H30zM33,25H34V26H33zM34,25H35V26H34zM2,26H3V27H2zM3,26H4V27H3zM6,26H7V27H6zM7,26H8V27H7zM8,26H9V27H8zM9,26H10V27H9zM11,26H12V27H11zM13,26H14V27H13zM14,26H15V27H14zM17,26H18V27H17zM19,26H20V27H19zM22,26H23V27H22zM23,26H24V27H23zM24,26H25V27H24zM25,26H26V27H25zM26,26H27V27H26zM27,26H28V27H27zM28,26H29V27H28zM29,26H30V27H29zM30,26H31V27H30zM31,26H32V27H31zM33,26H34V27H33zM10,27H11V28H10zM12,27H13V28H12zM13,27H14V28H13zM17,27H18V28H17zM18,27H19V28H18zM19,27H20V28H19zM20,27H21V28H20zM23,27H24V28H23zM24,27H25V28H24zM26,27H27V28H26zM30,27H31V28H30zM32,27H33V28H32zM33,27H34V28H33zM2,28H3V29H2zM3,28H4V29H3zM4,28H5V29H4zM5,28H6V29H5zM6,28H7V29H6zM7,28H8V29H7zM8,28H9V29H8zM10,28H11V29H10zM13,28H14V29H13zM15,28H16V29H15zM16,28H17V29H16zM17,28H18V29H17zM18,28H19V29H18zM20,28H21V29H20zM22,28H23V29H22zM26,28H27V29H26zM28,28H29V29H28zM30,28H31V29H30zM31,28H32V29H31zM33,28H34V29H33zM2,29H3V30H2zM8,29H9V30H8zM11,29H12V30H11zM13,29H14V30H13zM14,29H15V30H14zM16,29H17V30H16zM17,29H18V30H17zM24,29H25V30H24zM26,29H27V30H26zM30,29H31V30H30zM33,29H34V30H33zM2,30H3V31H2zM4,30H5V31H4zM5,30H6V31H5zM6,30H7V31H6zM8,30H9V31H8zM10,30H11V31H10zM12,30H13V31H12zM14,30H15V31H14zM18,30H19V31H18zM21,30H22V31H21zM24,30H25V31H24zM26,30H27V31H26zM27,30H28V31H27zM28,30H29V31H28zM29,30H30V31H29zM30,30H31V31H30zM31,30H32V31H31zM33,30H34V31H33zM2,31H3V32H2zM4,31H5V32H4zM5,31H6V32H5zM6,31H7V32H6zM8,31H9V32H8zM12,31H13V32H12zM14,31H15V32H14zM15,31H16V32H15zM16,31H17V32H16zM19,31H20V32H19zM20,31H21V32H20zM21,31H22V32H21zM22,31H23V32H22zM26,31H27V32H26zM28,31H29V32H28zM29,31H30V32H29zM30,31H31V32H30zM32,31H33V32H32zM33,31H34V32H33zM2,32H3V33H2zM4,32H5V33H4zM5,32H6V33H5zM6,32H7V33H6zM8,32H9V33H8zM12,32H13V33H12zM13,32H14V33H13zM14,32H15V33H14zM17,32H18V33H17zM19,32H20V33H19zM22,32H23V33H22zM25,32H26V33H25zM26,32H27V33H26zM28,32H29V33H28zM29,32H30V33H29zM30,32H31V33H30zM31,32H32V33H31zM32,32H33V33H32zM2,33H3V34H2zM8,33H9V34H8zM14,33H15V34H14zM16,33H17V34H16zM17,33H18V34H17zM18,33H19V34H18zM19,33H20V34H19zM20,33H21V34H20zM23,33H24V34H23zM25,33H26V34H25zM26,33H27V34H26zM28,33H29V34H28zM2,34H3V35H2zM3,34H4V35H3zM4,34H5V35H4zM5,34H6V35H5zM6,34H7V35H6zM7,34H8V35H7zM8,34H9V35H8zM10,34H11V35H10zM11,34H12V35H11zM12,34H13V35H12zM13,34H14V35H13zM16,34H17V35H16zM18,34H19V35H18zM19,34H20V35H19zM21,34H22V35H21zM22,34H23V35H22zM23,34H24V35H23zM24,34H25V35H24zM25,34H26V35H25zM26,34H27V35H26zM28,34H29V35H28zM31,34H32V35H31zM34,34H35V35H34z" id="qr-path" fill="#000000" fill-opacity="1" fill-rule="nonzero" stroke="none"/></svg></div><figcaption>This portfolio</figcaption></figure>
@@ -512,124 +456,104 @@ a{color:inherit}
 </section>
 </main>
 
+<!-- CV viewer -->
+<dialog id="cv" aria-labelledby="cv-t">
+  <div class="dlg-bar">
+    <h2 id="cv-t">Curriculum vitae</h2>
+    <p class="btns">
+      <a class="btn btn-main" href="cv/Chioma_Esther_Nwankwo_CV.pdf" download="Chioma_Esther_Nwankwo_CV.pdf">Download PDF</a>
+      <a class="btn" href="cv/Chioma_Esther_Nwankwo_CV.pdf" target="_blank" rel="noopener">Open in new tab</a>
+      <button class="btn" type="button" data-close="cv">Close</button>
+    </p>
+  </div>
+  <div class="cv-pages" id="cv-body">
+    <img data-src="cv/page-1.jpg" alt="CV, page 1 of 3">
+    <img data-src="cv/page-2.jpg" alt="CV, page 2 of 3">
+    <img data-src="cv/page-3.jpg" alt="CV, page 3 of 3">
+  </div>
+</dialog>
+
+<!-- Image zoom -->
+<dialog id="zoom" aria-label="Enlarged image">
+  <div class="dlg-bar"><p class="cap" id="zoom-cap" style="margin:0;color:var(--soft)"></p><button class="btn" type="button" data-close="zoom">Close</button></div>
+  <img id="zoom-img" src="" alt="">
+</dialog>
+
 <script>
 (function () {
   "use strict";
+
+  /* ---- adire motif field (static) ---- */
+  var el = document.getElementById("adire"), NS = "http://www.w3.org/2000/svg", n = 8, s = 72, V = n * s;
+  var C = { i9: "#111A58", i8: "#17237A", i5: "#2F6BFF", sky: "#8FB0FF", w: "#EEF0F7", p: "#FF4FA3", y: "#FFD23F" };
+  var svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("viewBox", "0 0 " + V + " " + V); svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
+  var cur = svg;
+  function add(t, a, p) { var e = document.createElementNS(NS, t); for (var k in a) e.setAttribute(k, a[k]); (p || cur).appendChild(e); return e; }
+  var r, c, i;
+  for (r = 0; r < n; r++) for (c = 0; c < n; c++) {
+    var x = c * s, y = r * s, cx = x + s / 2, cy = y + s / 2, kind = (r * 3 + c * 5) % 4, a1 = (r + c * 2) % 5 === 0, a2 = (r * 2 + c) % 6 === 0;
+    cur = add("g", { "class": "t" }, svg); cur.style.transitionDelay = ((r + c) * 55) + "ms";
+    add("rect", { x: x, y: y, width: s, height: s, fill: (r + c) % 2 ? C.i9 : C.i8 });
+    if (kind === 0) {
+      add("circle", { cx: cx, cy: cy, r: 29, fill: "none", stroke: C.sky, "stroke-width": 2 });
+      add("circle", { cx: cx, cy: cy, r: 20, fill: "none", stroke: C.w, "stroke-width": 2, opacity: .85 });
+      add("circle", { cx: cx, cy: cy, r: 10, fill: a1 ? C.p : (a2 ? C.y : C.i5) });
+    } else if (kind === 1) {
+      add("polygon", { points: cx + "," + (cy - 28) + " " + (cx + 28) + "," + cy + " " + cx + "," + (cy + 28) + " " + (cx - 28) + "," + cy, fill: "none", stroke: C.sky, "stroke-width": 2 });
+      add("polygon", { points: cx + "," + (cy - 15) + " " + (cx + 15) + "," + cy + " " + cx + "," + (cy + 15) + " " + (cx - 15) + "," + cy, fill: a2 ? C.y : (a1 ? C.p : C.i5) });
+    } else if (kind === 2) {
+      [[-16, -16], [16, -16], [-16, 16], [16, 16]].forEach(function (o) { add("circle", { cx: cx + o[0], cy: cy + o[1], r: 7, fill: C.sky }); });
+      add("circle", { cx: cx, cy: cy, r: 11, fill: "none", stroke: C.w, "stroke-width": 2, opacity: .85 });
+      if (a1) add("circle", { cx: cx, cy: cy, r: 4, fill: C.p });
+    } else {
+      for (i = -2; i <= 2; i++) add("line", { x1: cx + i * 9, y1: cy - 27, x2: cx + i * 9, y2: cy + 27, stroke: i % 2 ? C.sky : C.w, "stroke-width": 3, "stroke-linecap": "round", opacity: i % 2 ? 1 : .8 });
+    }
+  }
+  cur = svg;
+  var defs = add("defs", {});
+  var g = add("radialGradient", { id: "fade", cx: "50%", cy: "50%", r: "75%" }, defs);
+  add("stop", { offset: "55%", "stop-color": "#080C2E", "stop-opacity": 0 }, g); add("stop", { offset: "100%", "stop-color": "#080C2E", "stop-opacity": .8 }, g);
+  add("rect", { x: 0, y: 0, width: V, height: V, fill: "url(#fade)" });
+  el.insertBefore(svg, el.firstChild);
+
+  /* ---- one-time entrance motion ---- */
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var hero = document.getElementById("top");
-  var cv = document.getElementById("streams");
-  var ctx = cv.getContext("2d");
-  var copy = document.getElementById("copy");
-  var stages = document.getElementById("stages");
-  var nav = document.getElementById("nav");
-
-  /* ---- streams: messy on the left, ordered on the right ---- */
-  var R = 46, rib = [], i;
-  var seed = 11;
-  function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
-  for (i = 0; i < R; i++) {
-    rib.push({ k: i / (R - 1), a: 4 + rnd() * 4, b: 9 + rnd() * 6, s1: 0.35 + rnd() * 0.5, s2: 0.5 + rnd() * 0.6, p1: rnd() * 6.283, p2: rnd() * 6.283, dot: i % 3 === 0, off: rnd() });
-  }
-  var stops = [[65, 40, 230], [123, 60, 242], [216, 63, 184], [255, 106, 92], [255, 184, 107]];
-  function colour(k) {
-    var f = k * (stops.length - 1), j = Math.min(stops.length - 2, Math.floor(f)), t = f - j, a = stops[j], b = stops[j + 1];
-    return [Math.round(a[0] + (b[0] - a[0]) * t), Math.round(a[1] + (b[1] - a[1]) * t), Math.round(a[2] + (b[2] - a[2]) * t)];
-  }
-  for (i = 0; i < R; i++) rib[i].c = colour(rib[i].k);
-  function smooth(a, b, x) { var t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); }
-
-  var W = 0, H = 0, dpr = 1, yc = 0, band = 200, x0 = 0, x1 = 0;
-  var px = -999, py = 0, pull = 0, pullTarget = 0;
-  function measure() {
-    var hr = hero.getBoundingClientRect();
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    W = hr.width; H = hr.height;
-    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var top = copy.getBoundingClientRect().bottom - hr.top + 34;
-    var bot = stages.getBoundingClientRect().top - hr.top - 30;
-    if (bot - top < 200) top = bot - 200;
-    yc = (top + bot) / 2; band = (bot - top);
-    x0 = 0; x1 = W;
-  }
-  function yAt(r, u, t, x) {
-    var e = smooth(0.06, 0.82, u), ch = 1 - e;
-    var chaos = Math.sin(u * r.a * 3.1416 + t * r.s1 + r.p1) * 0.62 + Math.sin(u * r.b * 3.1416 - t * r.s2 + r.p2) * 0.38;
-    var spread = (r.k - 0.5) * band * (0.62 - 0.26 * e);
-    var wob = chaos * band * 0.2 * Math.pow(ch, 1.1);
-    var wave = Math.sin(u * 3.2 * 3.1416 + t * 0.5 + r.k * 1.4) * band * 0.06 * e;
-    var y = yc + spread + wob + wave;
-    if (pull > 0.001) { var d = (x - px) / 170; y += (py - y) * pull * 0.42 * Math.exp(-d * d); }
-    return y;
-  }
-  function frame(t) {
-    ctx.clearRect(0, 0, W, H);
-    ctx.globalCompositeOperation = "lighter";
-    ctx.lineJoin = "round"; ctx.lineCap = "round";
-    var step = Math.max(6, Math.round(W / 190)), j, r, x, y, u;
-    for (j = 0; j < R; j++) {
-      r = rib[j];
-      ctx.beginPath();
-      for (x = x0; x <= x1 + step; x += step) { u = x / W; y = yAt(r, u, t, x); if (x === x0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
-      ctx.lineWidth = 1.5;
-      ctx.strokeStyle = "rgba(" + r.c[0] + "," + r.c[1] + "," + r.c[2] + ",.62)";
-      ctx.stroke();
-    }
-    for (j = 0; j < R; j++) {
-      r = rib[j]; if (!r.dot) continue;
-      u = (t * 0.045 + r.off) % 1; x = u * W; y = yAt(r, u, t, x);
-      var rad = 2 + smooth(0.3, 0.9, u) * 2.2;
-      var g = ctx.createRadialGradient(x, y, 0, x, y, rad * 5);
-      g.addColorStop(0, "rgba(255,240,225,.95)"); g.addColorStop(0.25, "rgba(" + r.c[0] + "," + r.c[1] + "," + r.c[2] + ",.55)"); g.addColorStop(1, "rgba(" + r.c[0] + "," + r.c[1] + "," + r.c[2] + ",0)");
-      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, rad * 5, 0, 6.283); ctx.fill();
-    }
-    ctx.globalCompositeOperation = "source-over";
+  document.documentElement.classList.add("js");
+  var heroKids = document.querySelectorAll(".hero-grid > div:first-child > *");
+  Array.prototype.forEach.call(heroKids, function (k, i) { k.classList.add("rv"); k.style.transitionDelay = (0.1 + i * 0.09) + "s"; });
+  requestAnimationFrame(function () { requestAnimationFrame(function () {
+    el.classList.add("go");
+    Array.prototype.forEach.call(heroKids, function (k) { k.classList.add("in"); });
+  }); });
+  var targets = document.querySelectorAll(".section-title,.card,.xp,.skill,.cred,.edu,.contact");
+  Array.prototype.forEach.call(targets, function (k) { if (!k.classList.contains("contact")) k.classList.add("rv"); });
+  if (reduce || !("IntersectionObserver" in window)) {
+    Array.prototype.forEach.call(targets, function (k) { k.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }); }, { threshold: 0.12 });
+    Array.prototype.forEach.call(targets, function (k) { io.observe(k); });
   }
 
-  var running = false, raf = 0, t0 = performance.now();
-  function loop(now) {
-    pull += (pullTarget - pull) * 0.08;
-    frame(((now - t0) / 1000) * 0.9 + 2);
-    raf = requestAnimationFrame(loop);
+  /* ---- dialogs ---- */
+  function openDlg(d) { if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open", ""); }
+  function closeDlg(d) { if (typeof d.close === "function") d.close(); else d.removeAttribute("open"); }
+  var cvDlg = document.getElementById("cv"), cvBody = document.getElementById("cv-body");
+  function showCv() {
+    Array.prototype.forEach.call(cvBody.querySelectorAll("img[data-src]"), function (im) { im.src = im.getAttribute("data-src"); im.removeAttribute("data-src"); });
+    openDlg(cvDlg); cvBody.scrollTop = 0;
   }
-  function start() { if (!running && !reduce) { running = true; raf = requestAnimationFrame(loop); } }
-  function stop() { running = false; cancelAnimationFrame(raf); }
-
-  hero.addEventListener("pointermove", function (e) {
-    var r = hero.getBoundingClientRect();
-    px = e.clientX - r.left; py = e.clientY - r.top; pullTarget = 1;
-  });
-  hero.addEventListener("pointerleave", function () { pullTarget = 0; });
-  hero.addEventListener("pointerup", function (e) { if (e.pointerType !== "mouse") pullTarget = 0; });
-
-  function relayout() { measure(); if (reduce) frame(5.5); }
-  if (window.ResizeObserver) new ResizeObserver(relayout).observe(hero); else window.addEventListener("resize", relayout);
-  measure();
-  if (reduce) frame(5.5);
-  if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function (en) { en[0].isIntersecting ? start() : stop(); }, { threshold: 0.02 }).observe(hero);
-  } else { start(); }
-  document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else if (!reduce) start(); });
-
-  /* ---- nav colour once past the hero ---- */
-  var ticking = false;
-  function onScroll() {
-    if (ticking) return; ticking = true;
-    requestAnimationFrame(function () {
-      nav.classList.toggle("solid", window.scrollY > hero.offsetHeight - 70);
-      ticking = false;
+  Array.prototype.forEach.call(document.querySelectorAll("[data-open-cv]"), function (b) { b.addEventListener("click", showCv); });
+  var zoom = document.getElementById("zoom"), zi = document.getElementById("zoom-img"), zc = document.getElementById("zoom-cap");
+  Array.prototype.forEach.call(document.querySelectorAll("[data-zoom]"), function (b) {
+    b.addEventListener("click", function () {
+      zi.src = b.getAttribute("data-zoom"); zi.alt = b.querySelector("img").alt; zc.textContent = b.getAttribute("data-cap") || ""; openDlg(zoom);
     });
-  }
-  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
-
-  /* ---- draw the pipeline arrows once when they scroll into view ---- */
-  var flow = document.getElementById("flow");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (en) {
-      en.forEach(function (x) { if (x.isIntersecting) { flow.classList.add("in"); io.disconnect(); } });
-    }, { threshold: 0.5 });
-    io.observe(flow);
-  } else { flow.classList.add("in"); }
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-close]"), function (b) {
+    b.addEventListener("click", function () { closeDlg(document.getElementById(b.getAttribute("data-close"))); });
+  });
+  [cvDlg, zoom].forEach(function (d) { d.addEventListener("click", function (e) { if (e.target === d) closeDlg(d); }); });
 })();
 </script>
 </body>
